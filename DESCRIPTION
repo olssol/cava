@@ -1,0 +1,45 @@
+Package: cava
+Title: Clinical Trial Design for Cancer Vaccines
+Version: 1.0
+Author: Chenguang Wang [aut, cre]
+    Zilu Wang [aut, cre]
+    Gary L Rosner [aut]
+    Richard BS Roden  [aut]
+    Trustees of Columbia University [cph] (tools/make_cpp.R, R/stanmodels.R)
+Maintainer: Chenguang Wang <cwang68@jhmi.edu>
+Description: This is a clinical trial design software suite for cancer vaccines.
+    The package currently includes two major designs for cancer vaccine clinical
+    trials. The fist design is a Bayesian Phase I trial design that allows
+    simultaneous evaluation of safety and immunogenicity outcomes in the context
+    of vaccine studies. See Wang (2019) <DOI:10.1002/sim.8021> for the details
+    of the Phase I cancer vaccine trial design. The second design is a
+    batch-effect adjusted Simon two-stage design.
+Depends:
+    methods,
+    R (>= 3.5.0),
+    rstan (>= 2.19.2),
+    Rcpp (>= 1.0.2)
+License: GPL (>= 3)
+LinkingTo: 
+    BH (>= 1.69.0-1),
+    Rcpp (>= 1.0.2),
+    rstan (>= 2.14),
+    RcppEigen (>= 0.3.3.5.0),
+    StanHeaders (>= 2.18.1-10)
+RcppModules: stan_fit4visit_mod
+Imports:
+    sqldf (>= 0.4),
+    parallel (>= 3.2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+SystemRequirements: GNU make
+NeedsCompilation: yes
+Suggests:
+    knitr,
+    shiny,
+    rmarkdown,
+    pander,
+    xtable
+VignetteBuilder: knitr
+
