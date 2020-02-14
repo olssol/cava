@@ -1,13 +1,14 @@
 shinyUI(
     fluidPage(
-        # CSS
+        ## CSS
         tags$head(
-            tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
-            tags$title("Phase I: Vaccine Dose Selection Design and Analysis"),
-            tags$style(".shiny-file-input-progress {display: none}"),
-        tags$script(src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", type="text/javascript")
+                 tags$link(rel = "stylesheet", type = "text/css",
+                           href = "styles.css"),
+                 tags$title("Phase I: Vaccine Dose Selection Design and Analysis"),
+                 tags$style(".shiny-file-input-progress {display: none}"),
+                 tags$script(src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
+                             type = "text/javascript")
         ),
-
 
         withTags({
             div(class = "cheader",
@@ -27,4 +28,3 @@ shinyUI(
         uiOutput("mainpage")
     )
 )
- 

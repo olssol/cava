@@ -2,7 +2,6 @@
 #'
 #'
 #'
-#' @export
 #'
 plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6)) {
     dta <- rbind(data.frame(Type = "gamma", Error = x$gamma),

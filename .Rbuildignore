@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^.gitignore$
+^.*\.*history$
+^.*\.DS_Store$
+^.*\.RData$

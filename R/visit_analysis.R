@@ -204,7 +204,7 @@ vtInterim <- function(cur.obs.y, prev.obs.y = NULL, prev.res = NULL,
 #'
 #' @method plot VTDEC
 #'
-#' @export
+#'
 #'
 plot.VTDEC <- function(x,
                        margin = 0.003, nms = c("TT", "NME", "SE", "UN"),
