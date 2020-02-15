@@ -4,6 +4,12 @@
 \name{cava-package}
 \alias{cava-package}
 \alias{cava}
+\alias{##}
+\alias{@useDynLib}
+\alias{cava,}
+\alias{.registration}
+\alias{=}
+\alias{TRUE}
 \title{Cancer Vaccine Clinical Trial Design}
 \description{
 This package contains the functions for implementing the \strong{visit}

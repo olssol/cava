@@ -3,7 +3,8 @@
 #' @docType package
 #' @name cava-package
 #' @aliases cava
-#' @useDynLib cava, .registration = TRUE
+#' ## @useDynLib cava, .registration = TRUE
+#' @useDynLib cava
 #'
 #' @importFrom rstan sampling extract stanc rstan_options traceplot stan_rhat
 #' @importFrom grDevices colors

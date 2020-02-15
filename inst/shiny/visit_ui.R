@@ -9,7 +9,7 @@ get.shinyConst <- reactive ({
         CLSSIMU   = "VTSIMU",
         CLSDEC    = "VTDEC"
     );
-    
+
     rst$DENLEGEND <- c("Toxicity Rate", "Response Rate", rst$THETA);
     return(rst);
 })
@@ -19,7 +19,7 @@ get.shinyConst <- reactive ({
 ##                  MAINPAGE UI
 ##----------------------------------------------------------------------
 
-tabpanel.all <- function() {
+visit_main <- function() {
     tabsetPanel(type = "pills",
         id = "mainpanel",
         page.about(),
@@ -472,7 +472,7 @@ page.simu_options <- function() {
                             }),
                             style = 'margin-top: 54px;'
                         ),
-                        
+
                         column(9,
                             conditionalPanel(
                                 condition = "input.scenarioInput == \"Probability by Odds Ratio\"",
@@ -535,12 +535,12 @@ page.simu_options <- function() {
                                     column(4,
                                         conditionalPanel(
                                             condition = "input.scenarioRho == \"Single\" && input.scenarioInput == \"Probability by Odds Ratio\"",
-                                            
+
                                             h3(
                                                 withMathJax("$$\\rho$$"),
                                                 style = 'text-align: center; margin-top: 10px; margin-bottom: 0px;'
                                             ),
-                                            
+
                                             numericInput(
                                                 inputId = "rho",
                                                 label = "",
@@ -722,7 +722,7 @@ page.analysis <- function() {
                             }),
                             style = 'margin-top: 54px;'
                         ),
-                    
+
                         column(9,
                             fluidRow(
                                 column(3,
@@ -792,7 +792,7 @@ page.analysis <- function() {
                             })
                         )
                     ),
-                    
+
                     fluidRow(
                         column(2,
                             actionButton(
