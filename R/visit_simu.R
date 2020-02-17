@@ -362,6 +362,7 @@ vtSimu <- function(n.rep=100, seed=NULL, ..., n.cores=1, update.progress=NULL) {
 #'
 #' @method summary2 VTSIMU
 #'
+#' @export
 #'
 summary2.VTSIMU <- function(x, ...) {
     cur.rst  <- summary(x);
@@ -424,6 +425,7 @@ summary2.VTSIMU <- function(x, ...) {
 #'
 #' @method plot VTTRUEPS
 #'
+#' @export
 #'
 plot.VTTRUEPS <- function(x, draw.levels = NULL, draw.curves = 1:6,
                           legends = NULL, ltys = c(1,1,2,2,2,2), pch=19:24, ylim = c(0,1),
@@ -483,6 +485,7 @@ plot.VTTRUEPS <- function(x, draw.levels = NULL, draw.curves = 1:6,
 #'
 #' @method summary VTTRUEPS
 #'
+#' @export
 #'
 summary.VTTRUEPS <- function(object, digits = 2, ...) {
 
@@ -526,6 +529,7 @@ summary.VTTRUEPS <- function(object, digits = 2, ...) {
 #'
 #' @method summary2 VTTRUEPS
 #'
+#' @export
 #'
 summary2.VTTRUEPS <- function(x, rp2d = -1, digits = 2, ...) {
     fill.pq <- NULL;
