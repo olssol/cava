@@ -27,7 +27,7 @@ bacSimonSingle <- function(cumu, n1, r1, n, r) {
     .Call('_cava_bacSimonSingle', PACKAGE = 'cava', cumu, n1, r1, n, r)
 }
 
-#' Simon's two-stage design
+#' Simon's two-stage design 
 #' @export
 bacSimonDesign <- function(y0, y1, nmax, nmin, bsize, alpha, beta) {
     .Call('_cava_bacSimonDesign', PACKAGE = 'cava', y0, y1, nmax, nmin, bsize, alpha, beta)
