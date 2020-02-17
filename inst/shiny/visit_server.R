@@ -397,7 +397,6 @@ observeEvent(input$simu, {
                             style = 'text-align: left;'
                         ),
                         renderTable({
-                            browser()
                             xtable(summary(rst)[[s]]);
                         })
                     )

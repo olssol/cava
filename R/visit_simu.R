@@ -579,7 +579,7 @@ summary2.VTTRUEPS <- function(x, rp2d = -1, digits = 2, ...) {
 #'
 #' @method summary VTSIMU
 #'
-#'
+#' @export
 #'
 summary.VTSIMU <- function(object, ...) {
     f.tp <- function(var) {
