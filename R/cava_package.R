@@ -11,7 +11,6 @@
 #' @importFrom graphics axis box legend lines par plot points text arrows grid rect
 #' @importFrom parallel detectCores
 #' @importFrom utils as.roman
-#' @importFrom clinfun ph2simon
 #'
 #' @import stats
 #' @import Rcpp
@@ -162,6 +161,8 @@
 #' Wang, C., Rosner, G. L., & Roden, R. B. (2019). A Bayesian design for phase I cancer
 #' therapeutic vaccine trials. Statistics in medicine, 38(7), 1170-1189.
 NULL
+
+## @importFrom clinfun ph2simon
 
 
 #' Parameters
