@@ -1,8 +1,12 @@
-# Constants in the package
+##----------------------------------------------------------------------
+##                  Constants in the package
+##----------------------------------------------------------------------
+
 get.shinyConst <- reactive ({
-    rst <- list(REGIONS = c("Toxic", "Ineffective", "Safe,Effective", "Effective,Safety concern"),
+    rst <- list(
+        REGIONS   = c("Toxic", "Ineffective", "Safe,Effective", "Effective,Safety concern"),
         THETA     = c("No DLT, No Response", "No DLT, Response",
-        "DLT, No Response", "DLT, Response"),
+                      "DLT, No Response", "DLT, Response"),
         CLSPRIOR  = "VTPRIOR",
         CLSPOST   = "VTPOST",
         CLSTRUEPS = "VTTRUEPS",
@@ -13,7 +17,6 @@ get.shinyConst <- reactive ({
     rst$DENLEGEND <- c("Toxicity Rate", "Response Rate", rst$THETA);
     return(rst);
 })
-
 
 ##----------------------------------------------------------------------
 ##                  MAINPAGE UI
@@ -27,30 +30,10 @@ visit_main <- function() {
         page.simu_options(),
         page.simu_result(),
         page.analysis(),
-        page.report()
+        page.report(),
+        selected = "Design Options"
     )
 }
-
-##----------------------------------------------------------------------
-##                  DISPLAY ERROR
-##----------------------------------------------------------------------
-
-writeError <- function(errors) {
-    rst <- '';
-    for (i in 1:length(errors)) {
-        rst <- paste(rst, '<h6>', errors[[i]], '</h6>');
-    }
-    showModal(
-        modalDialog(
-            title = "Error",
-            footer = NULL,
-            size = 'm',
-            easyClose = TRUE,
-            (HTML(rst))
-        )
-    )
-}
-
 
 ##----------------------------------------------------------------------
 ##                  ABOUT UI
@@ -63,7 +46,7 @@ page.about <- function() {
             column(8,
                 wellPanel(
                     fluidRow(
-                        withMathJax(includeHTML('www/text.HTML')),
+                        withMathJax(includeHTML('www/file_visit.html')),
                         style = 'padding-left: 30px; padding-right: 30px;'
                     ),
                     style = 'padding-left: 30px;'
@@ -93,10 +76,7 @@ page.design <- function() {
 # Parameters
 page.param <- function() {
     wellPanel(
-        fluidRow(
-            h4("Design Parameters"),
-            style = 'margin-left: 20px; border-bottom: 2px solid #E3E3E3; margin-right: 20px; margin-bottom: 20px'
-        ),
+        get_row_bottom("Design Parameters"),
         fluidRow(
             column(6,
                 fluidRow(
@@ -202,10 +182,7 @@ page.param <- function() {
 
 page.prior <- function() {
     wellPanel(
-        fluidRow(
-            h4("Probability Model"),
-            style = 'margin-left: 20px; border-bottom: 2px solid #E3E3E3; margin-right: 20px;'
-        ),
+        get_row_bottom("Probability Model"),
         fluidRow(
             column(4,
                 radioButtons(
@@ -656,8 +633,6 @@ page.simu_result <- function() {
         )
     )
 }
-
-
 
 page.simu_output <- function(l) {
     result <- list();

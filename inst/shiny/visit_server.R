@@ -1,5 +1,5 @@
 
-output$simulationStart <- renderUI({
+output$simulationStart <- renderUI ({
     actionButton(
         inputId = "simu",
         label = "Start simulation"
@@ -380,9 +380,10 @@ observeEvent(input$simu, {
                    "npat: Average number of patients for each cohort and each dose level",
                    "samples: Average number of DLT risks and responses for each cohort on each dose level",
                    "decision: Frequency each region in the decision map is selected for each cohort on each dose level",
-                   "prob: Average conditional probabilities corresponding to each region in the decision map for each cohort on each dose level",
+                   "prob: Average conditional probabilities corresponding to each region in the decision
+                    map for each cohort on each dose level",
                    "ptox: Mean and credible interval of DLT risk rates for each cohort on each dose level",
-                   "pres: Mean and credible interval of immune response rates for each cohort on each dose level");
+                   "pres: Mean and credible interval of immune response rates for each cohort on each dose level")
 
         for (i in 1:(NROW(rst))) {
             local({

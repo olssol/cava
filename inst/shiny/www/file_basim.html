@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-02-15 Sat 20:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A Batch-Effect Adjusted Simon's Two-Stage Design for Cancer Vaccine Phase II Clinical Studies</title>
+</head>
+<body>
+<div id="content">
+<h1 class="title">A Batch-Effect Adjusted Simon's Two-Stage Design for Cancer Vaccine Phase II Clinical Studies</h1>
+
+<div id="outline-container-org7f9da55" class="outline-2">
+<h2 id="org7f9da55"><span class="section-number-2">1</span> Abstract</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+In the development of cancer vaccines, phase II clinical studies examine the
+efficacy of a vaccine at the optimal dosage determined in the corresponding
+phase I studies in order to screen out vaccines with poor activities. Because of
+its simplicity and ethical considerations, Simon's two-stage design and its
+variations are popular tools for designing cancer phase II clinical studies.
+Outcomes from different patients are typically assumed independent from each
+other in Simon's two-stage design. For cancer vaccine studies, immune responses
+from multiple patients are usually measured as batches. In the presence of batch
+effects, the outcomes are correlated with each other. Thus, the independence
+assumption does not hold. In this paper, we conduct simulation studies to
+explore the impact of batch effects on phase II studies with Simon's two-stage
+design. Furthermore, we propose an adjusted Simon's two-stage design that
+accounts for batch effects and evaluate its performance by simulation studies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8269629" class="outline-2">
+<h2 id="org8269629"><span class="section-number-2">2</span> Background</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Batch effect has long been recognized as a thorny issue for assays
+\citep{youden1972enduring}. It can be confounded with the outcomes of interest,
+cause significant bias in the measurements, and lead to serious concerns about
+the validity of the findings. Although approaches have been proposed to address
+batch effects through improved experimental design or statistical adjustments,
+These proposals are primarily suitable for high-dimensional assays such as
+microarrays, bead chips and next-generation sequencing, where there are enough
+data to detect and remove batch effects via sophisticated modeling approaches
+\citep{alter2000singular,benito2004adjustment,johnson2007adjusting,leek2010tackling}.
+In low-dimensional settings such as clinical trial design and analysis, batch
+effect adjustment is often neglected. To the best of our knowledge, research
+addressing and mitigating the impact of batch effects on clinical trials is very
+limited.
+</p>
+
+<p>
+In this paper, we focus on evaluating the impact of batch effects on a specific
+clinical trial design: Simon's two-stage design \citep{simon1989optimal}.
+Simon's two-stage design allows the investigators to conduct straightforward
+interim analysis at the end of the first stage and to stop the study early for
+futility. Because of its simplicity and ethical considerations, Simon's
+two-stage design is widely adopted in phase II cancer clinical studies. In
+Simon's two-stage design, outcomes from different patients are assumed
+independent from each other. This independence assumption, however, does not
+hold in the presence of batch effects. \cite{sargent1999sample} proposed an
+approximation method, hereinafter referred to as the Sargent's method, to adjust
+Simon's two-stage design for per-tumor analysis when each patient may have
+multiple tumors. We propose a simulation-based batch-effect adjusted Simon's
+two-stage design to take into account batch effects at study design. We also
+conduct numerical studies to evaluate the performance of the proposal, compare
+it with the Sargent's method, and demonstrate it by a therapeutic HPV vaccine
+trial. Finally, we have developed statistical software to implement the proposed
+design, and a brief introduction to the software is given in the paper.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55a605d" class="outline-2">
+<h2 id="org55a605d"><span class="section-number-2">3</span> Reference</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Wang C, Z Wang, G Rosner, WK Huh, RBS Roden, S Bae, A Batch-Effect Adjusted
+Simon's Two-Stage Design for Cancer Vaccine Clinical Studies, <i>under revision</i>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

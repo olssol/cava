@@ -17,34 +17,15 @@ shinyUI(
                              type = "text/javascript")
         ),
 
-        withTags({
-            div(class = "cheader",
-                "Cancer Vaccine Clinical Trial Design and Analysis",
-                lapply(list(c("btnClose", "Exit", "setTimeout(function(){window.close();},500);"),
-                            c("btnProjects", "Designs", "")),
-                       function (x) {
-                           tags$button(
-                                    id = x[1],
-                                    type = "button",
-                                    class = "btn action-button",
-                                    onclick = x[3],
-                                    x[2],
-                                    style = "float: right; background-color: #2B3E50;"
-                                )
-                           }))
-        }),
+        ## Title
+        uiOutput("title"),
 
         ##wait for starting
-        conditionalPanel(condition="$('html').hasClass('shiny-busy')",
-                         tags$div("Loading...", id = "loadmessage")),
-
+        conditionalPanel(condition = "$('html').hasClass('shiny-busy')",
+                         tags$div("Loading...",
+                                  id = "loadmessage")),
 
         ## Main Page
-        uiOutput("mainpage"),
-
-        ## foot
-        div(class = "cfooter",
-            HTML("By the <a href='http://pathology.jhu.edu/ccspore/index.html'
-                  target = '_blank'>Cervical Cancer SPORE</a> Team."))
+        uiOutput("mainpage")
     )
 )

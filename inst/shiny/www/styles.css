@@ -203,11 +203,12 @@ div#prog.modal-body {
 }
 
 .cfooter {
+    /* position:   absolute; */
+    /* bottom:     0; */
     font-size:  12px;
     text-align: right;
-    position:   absolute;
-    bottom:     40px;
     width:      75%;
+    padding: 20px 20px 20px 20px;
     border-top: 3px solid #f0f0f0;
     margin-left: 100px;
     z-index: -1;
@@ -217,10 +218,11 @@ div#prog.modal-body {
 /*-----------entrance page-------------*/
 #entrance {
     margin-bottom: 100px;
-    padding: 40px;
+    margin-left: 100px;
+    padding: 100px 100px 100px 100px;
     height: 100%;
     min-width: 600px;
-    min-height: 800px;
+    min-height: 600px;
     font-size: 100%;
     color: #000;
     line-height: 1.2;
