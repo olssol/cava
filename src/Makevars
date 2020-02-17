@@ -8,7 +8,7 @@ OBJECTS = $(SOURCES:.stan=.o) RcppExports.o basim_tool.o basim_design.o
 all: $(SHLIB)
 		@if test -e "/usr/bin/install_name_tool" && test -e "/usr/local/clang4/lib/libc++.1.dylib" && test -e "/usr/lib/libc++.1.dylib"; then /usr/bin/install_name_tool -change /usr/local/clang4/lib/libc++.1.dylib /usr/lib/libc++.1.dylib $(SHLIB); fi
 
-clean:
+clean:R
 		rm -rf stan_files/*.o
 		rm -rf *.so *.o
 		rm -rf stan_files/*.cc
