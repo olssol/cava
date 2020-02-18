@@ -20,7 +20,7 @@ shinyServer(function(input, output, session) {
 
     ##  0: Projects Gallery
     ##  1: VISIT
-    ##  2: BASIM
+    ##  2: BASIC
     userLog$entrance <- 0
 
     ##---------------------------------------------------------------
@@ -49,9 +49,9 @@ shinyServer(function(input, output, session) {
         if (0 == userLog$entrance) {
             tit <- "Cancer Vaccine Clinical Trial Design and Analysis"
         } else if (1 == userLog$entrance) {
-            tit <- "VISIT: Phase I Dose Escalation Design"
+            tit <- "visit: Phase I Dose Escalation Design"
         } else if (2 == userLog$entrance) {
-            tit <- "BASIM: Phase II Batch-Effect Adjusted Simon's Two-Stage Design"
+            tit <- "basic: Phase II Batch-Effect Adjusted Simon's Two-Stage Design"
         }
 
         get_head(tit)

@@ -204,6 +204,7 @@ vtInterim <- function(cur.obs.y, prev.obs.y = NULL, prev.res = NULL,
 #'
 #' @method plot VTDEC
 #'
+#' @export
 #'
 #'
 plot.VTDEC <- function(x,
@@ -397,9 +398,9 @@ vtTrack <- function(obs.all,
     x.tot <- x.tot - length(tbl.level) + 1;
 
     x.max <- (x.tot + 3) * 1;
-    y.max <- max.level * 1;
+    y.max <- max.level * 1.2;
 
-    plot(NULL, NULL, xlim=c(0, x.max), ylim=c(height/2, y.max),
+    plot(NULL, NULL, xlim=c(0, x.max), ylim = c(height/2, y.max),
          axes = FALSE, xlab = "", ylab = "", ...);
     box();
 
