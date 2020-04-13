@@ -33,14 +33,14 @@ vtStan <- function(obs.y,
                    warmup = 2000,
                    ...) {
 
-    ##model
+    ## model
     if (0 == model) {
-        ##PARA
+        ## PARA
         FIXRHOAT1   <- 0;
         SINGLERHO   <- 1;
         SINGLEALPHA <- 1;
     } else if (1 == model) {
-        ##PARA+
+        ## PARA+
         FIXRHOAT1   <- 1;
         SINGLERHO   <- 1;
         SINGLEALPHA <- 1;

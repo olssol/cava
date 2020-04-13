@@ -8,4 +8,3 @@
         loadModule(m, what = TRUE);
     }
 }
-
