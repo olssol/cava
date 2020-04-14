@@ -4,14 +4,19 @@
 #'
 #' @export
 #'
-baDesignBetaBin <- function(par.design, rho = 0, bsizes = 1, nmin = 10, nmax = 100, ...) {
+baDesignBetaBin <- function(par.design, rho = 0, bsizes = 1, nmin = 10, nmax = 100,
+                            ..., seed = NULL) {
+
+    if (!is.null(seed))
+        old_seed <- set.seed(seed)
+
     rho <- rep(rho, 2)
     yp0 <- baSimuBetaBin(max(bsizes), p = par.design$P0, rho = rho[1], ...)$y
     yp1 <- baSimuBetaBin(max(bsizes), p = par.design$P1, rho = rho[2], ...)$y
 
     rst <- NULL;
     for (i in 1:length(bsizes)) {
-        cur.rst        <- bacSimonDesign(yp0, yp1, nmax, nmin, bsizes[i],
+        cur.rst         <- bacSimonDesign(yp0, yp1, nmax, nmin, bsizes[i],
                                          par.design$ALPHA, 1 - par.design$POWER);
         cur.rst        <- data.frame(cur.rst);
         cur.rst$design <- c("Optimal", "Minimax");
@@ -25,6 +30,12 @@ baDesignBetaBin <- function(par.design, rho = 0, bsizes = 1, nmin = 10, nmax = 1
     rst$p1    <- par.design$P1;
     rst$alpha <- par.design$ALPHA;
     rst$beta  <- par.design$BETA;
+
+    ## return
+    if (!is.null(seed))
+        set.seed(old_seed)
+
+    rownames(rst) <- NULL
     rst
 }
 
@@ -51,13 +62,14 @@ baGetRejRate <- function(yp0, yp1, n1, r1, nt, r, bsize = 1) {
 
 #' Evaluate design sensitivity
 #'
-#' Get type I error and power given p0, p1, rho, batch size, n1, r1, n, r
+#' Get type I error and power given p0, p1, rho, batch size, n1, r1, n, r for
+#' one rho
 #'
 #'
 #'
 #' @export
 #'
-baDesignSens <- function(p0, p1, rho, bsize, n1, r1, nt, r, ...) {
+baDesignSensSingle <- function(rho, p0, p1, bsize, n1, r1, nt, r, ...) {
     rho   <- rep(rho, 2)
     yp0   <- baSimuBetaBin(bsize, p = p0, rho = rho[1], ...)$y
     yp1   <- baSimuBetaBin(bsize, p = p1, rho = rho[2], ...)$y
@@ -72,6 +84,45 @@ baDesignSens <- function(p0, p1, rho, bsize, n1, r1, nt, r, ...) {
       pet0  = cp0[2], pet1  = cp1[2])
 }
 
+#' Evaluate design sensitivity
+#'
+#' Get type I error and power given p0, p1, rho, batch size, n1, r1, n, r
+#'
+#' @param design A list with p0, p1, batch size, n1, r1, n, r
+#'
+#' @export
+#'
+baDesignSens <- function(rhos, design, ..., seed = NULL) {
+    if (!is.null(seed))
+        old_seed <- set.seed(seed)
+
+    rst <- NULL
+    for (i in 1:length(rhos)) {
+        rho     <- rep(rhos[i], 2)
+        cur_rst <- with(design, {
+            yp0   <- baSimuBetaBin(bsize, p = p0, rho = rho[1], ...)$y
+            yp1   <- baSimuBetaBin(bsize, p = p1, rho = rho[2], ...)$y
+
+            cumu0 <- bacCumProb(yp0, n, n1, bsize)
+            cumu1 <- bacCumProb(yp1, n, n1, bsize)
+            cp0   <- bacSimonSingle(cumu0, n1, r1, n, r)
+            cp1   <- bacSimonSingle(cumu1, n1, r1, n, r)
+
+            c(rho   = rhos[i],
+              type1 = cp0[3], power = cp1[3],
+              en0   = cp0[1], en1   = cp1[1],
+              pet0  = cp0[2], pet1  = cp1[2])
+        })
+
+        rst <- rbind(rst, cur_rst)
+    }
+
+    if (!is.null(seed))
+        set.seed(old_seed)
+
+    rownames(rst) <- NULL
+    data.frame(rst)
+}
 
 
 ## #' Get actuarial type I and II error in Sargent's method

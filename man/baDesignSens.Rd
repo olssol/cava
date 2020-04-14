@@ -4,7 +4,10 @@
 \alias{baDesignSens}
 \title{Evaluate design sensitivity}
 \usage{
-baDesignSens(p0, p1, rho, bsize, n1, r1, nt, r, ...)
+baDesignSens(rhos, design, ..., seed = NULL)
+}
+\arguments{
+\item{design}{A list with p0, p1, batch size, n1, r1, n, r}
 }
 \description{
 Get type I error and power given p0, p1, rho, batch size, n1, r1, n, r

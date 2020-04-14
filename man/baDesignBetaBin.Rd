@@ -5,7 +5,7 @@
 \title{Get designs for BetaBinomial designs}
 \usage{
 baDesignBetaBin(par.design, rho = 0, bsizes = 1, nmin = 10,
-  nmax = 100, ...)
+  nmax = 100, ..., seed = NULL)
 }
 \description{
 Get designs for BetaBinomial designs
