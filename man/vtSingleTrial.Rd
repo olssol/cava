@@ -4,9 +4,16 @@
 \alias{vtSingleTrial}
 \title{Simulate a single trial}
 \usage{
-vtSingleTrial(trueps, size.cohort = 3, size.level = NULL,
-  etas = c(0.1, 0.3), dec.cut = 0.65, prob.mdl = c("NONPARA",
-  "NONPARA+", "PARA", "PARA+"), priors = NULL, ...)
+vtSingleTrial(
+  trueps,
+  size.cohort = 3,
+  size.level = NULL,
+  etas = c(0.1, 0.3),
+  dec.cut = 0.65,
+  prob.mdl = c("NONPARA", "NONPARA+", "PARA", "PARA+"),
+  priors = NULL,
+  ...
+)
 }
 \arguments{
 \item{trueps}{True \eqn{\theta}'s. A \code{VTTRUEPS} object made from

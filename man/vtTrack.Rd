@@ -4,10 +4,20 @@
 \alias{vtTrack}
 \title{Plot the track plot of dose escalation}
 \usage{
-vtTrack(obs.all, cex.txt = 0.9, decision = 1, max.level = NULL,
-  letters = c("E", "C", "S"), colors = c("green", "yellow", "red"),
-  height = 0.5, end.width = 2, end.height = height,
-  cex.roman = 0.9, cex.end = 0.9, ...)
+vtTrack(
+  obs.all,
+  cex.txt = 0.9,
+  decision = 1,
+  max.level = NULL,
+  letters = c("E", "C", "S"),
+  colors = c("green", "yellow", "red"),
+  height = 0.5,
+  end.width = 2,
+  end.height = height,
+  cex.roman = 0.9,
+  cex.end = 0.9,
+  ...
+)
 }
 \arguments{
 \item{obs.all}{All observations collected in a matrix with 5 columns. Column

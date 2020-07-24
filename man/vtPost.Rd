@@ -4,8 +4,14 @@
 \alias{vtPost}
 \title{Postetrior sampling for given observed samples}
 \usage{
-vtPost(obs.y, prob.mdl = c("NONPARA", "NONPARA+", "PARA", "PARA+"),
-  priors = NULL, ..., nsmp = 4000, prior.const = 0.5)
+vtPost(
+  obs.y,
+  prob.mdl = c("NONPARA", "NONPARA+", "PARA", "PARA+"),
+  priors = NULL,
+  ...,
+  nsmp = 4000,
+  prior.const = 0.5
+)
 }
 \arguments{
 \item{obs.y}{Observed data matrix with \eqn{l} rows and 4 columns. Row \eqn{k} in the matrix

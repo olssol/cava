@@ -4,8 +4,15 @@
 \alias{baSimuError}
 \title{Simulate random error}
 \usage{
-baSimuError(n, error.type = c("normal", "skewed"), sig = 1, mu = 0,
-  skew.mu = NULL, skew.phi = NULL, skew.noise = 0.001)
+baSimuError(
+  n,
+  error.type = c("normal", "skewed"),
+  sig = 1,
+  mu = 0,
+  skew.mu = NULL,
+  skew.phi = NULL,
+  skew.noise = 0.001
+)
 }
 \description{
 Simulate random error

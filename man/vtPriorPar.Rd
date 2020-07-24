@@ -4,8 +4,7 @@
 \alias{vtPriorPar}
 \title{Get prior distribution parameters}
 \usage{
-vtPriorPar(prior.y = NULL, tau = NULL, sdalpha = 10, sdrho = 10,
-  vtheta = NULL)
+vtPriorPar(prior.y = NULL, tau = NULL, sdalpha = 10, sdrho = 10, vtheta = NULL)
 }
 \arguments{
 \item{prior.y}{Historical data for generating prior parameters. It has the

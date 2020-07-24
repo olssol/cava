@@ -4,8 +4,7 @@
 \alias{vtScenario}
 \title{Set simulation scenario}
 \usage{
-vtScenario(tox = c(0.05, 0.05, 0.08), res = c(0.2, 0.3, 0.5),
-  rho = 1)
+vtScenario(tox = c(0.05, 0.05, 0.08), res = c(0.2, 0.3, 0.5), rho = 1)
 }
 \arguments{
 \item{tox}{Vector of marginal DLT risk rates for all levels}

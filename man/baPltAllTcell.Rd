@@ -4,8 +4,13 @@
 \alias{baPltAllTcell}
 \title{Plot histogram of t-cells Y0 Y1 and Y1/Y0 for all scenarios}
 \usage{
-baPltAllTcell(lst.par, xlims = list(c(-1, 1), c(0, 2000), c(0, 20)),
-  ylims = c(9, 0.2, 0.3), label = "Scenario", ...)
+baPltAllTcell(
+  lst.par,
+  xlims = list(c(-1, 1), c(0, 2000), c(0, 20)),
+  ylims = c(9, 0.2, 0.3),
+  label = "Scenario",
+  ...
+)
 }
 \description{
 Plot histogram of t-cells Y0 Y1 and Y1/Y0 for all scenarios

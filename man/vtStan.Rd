@@ -4,8 +4,7 @@
 \alias{vtStan}
 \title{Call STAN models for MCMC sampling}
 \usage{
-vtStan(obs.y, priors, model = 0, iter = 4000, chains = 4,
-  warmup = 2000, ...)
+vtStan(obs.y, priors, model = 0, iter = 4000, chains = 4, warmup = 2000, ...)
 }
 \arguments{
 \item{obs.y}{Observed data matrix with \eqn{l} rows and 4 columns. Row \eqn{k} in the matrix

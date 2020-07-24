@@ -4,8 +4,7 @@
 \alias{baGetCuts}
 \title{Get cut off of the outcome to get given response rates}
 \usage{
-baGetCuts(par.err, par.other, rates, f.simu = baSimuTcell, ...,
-  seed = NULL)
+baGetCuts(par.err, par.other, rates, f.simu = baSimuTcell, ..., seed = NULL)
 }
 \description{
 Get cut off of the outcome to get given response rates

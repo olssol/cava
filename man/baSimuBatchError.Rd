@@ -4,9 +4,12 @@
 \alias{baSimuBatchError}
 \title{Simulate errors for all batches}
 \usage{
-baSimuBatchError(bsize, par.err = list(gamma = list(error.type =
-  "normal", sig = 1), delta = list(error.type = "normal", sig = 1), epsilon
-  = list(error.type = "normal", sig = 1)), nreps = 1e+06)
+baSimuBatchError(
+  bsize,
+  par.err = list(gamma = list(error.type = "normal", sig = 1), delta = list(error.type
+    = "normal", sig = 1), epsilon = list(error.type = "normal", sig = 1)),
+  nreps = 1e+06
+)
 }
 \description{
 Simulate errors for all batches

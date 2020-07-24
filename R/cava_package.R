@@ -11,7 +11,7 @@
 #' @importFrom graphics axis box legend lines par plot points text arrows grid rect
 #' @importFrom parallel detectCores
 #' @importFrom utils as.roman
-#'
+#' @importFrom lme4 lmer
 #' @import stats
 #' @import Rcpp
 #' @import methods

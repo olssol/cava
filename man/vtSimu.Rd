@@ -4,8 +4,7 @@
 \alias{vtSimu}
 \title{Conduct simulation study}
 \usage{
-vtSimu(n.rep = 100, seed = NULL, ..., n.cores = 1,
-  update.progress = NULL)
+vtSimu(n.rep = 100, seed = NULL, ..., n.cores = 1, update.progress = NULL)
 }
 \arguments{
 \item{n.rep}{Number of repetitions}

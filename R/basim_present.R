@@ -9,20 +9,25 @@ plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6)) {
                  data.frame(Type = "epsilon", Error = x$epsilon));
 
     ggplot(data = dta, aes(x = Error)) +
-        stat_density(aes(group=Type, linetype = Type, color = Type),
-                     position="identity", geom = "line", adjust = 1.2, na.rm = TRUE) +
-        scale_colour_manual(values = c("gamma"   = "red",
-                                       "delta"   = "blue",
-                                       "epsilon" = "black"),
-                            labels = c(expression(gamma),
-                                       expression(delta),
-                                       expression(epsilon))) +
-        scale_linetype(guide = "none") +
-        theme_bw() +
-        theme(legend.position = pos.legend,
-              legend.title = element_blank()) +
-        labs(x = "Random Effects", y = "Density") +
-        opts;
+      stat_density(aes(group=Type, linetype = Type, color = Type),
+                   position="identity", geom = "line", adjust = 1.2, na.rm = TRUE) +
+      scale_color_manual(values = c("gamma"   = "red",
+                                    "delta"   = "blue",
+                                    "epsilon" = "black"),
+                         labels = c(expression(gamma),
+                                    expression(delta),
+                                    expression(epsilon))) +
+      scale_linetype_manual(values = c("gamma"  = "solid",
+                                      "delta"   = "twodash",
+                                      "epsilon" = "dashed"),
+                         labels = c(expression(gamma),
+                                    expression(delta),
+                                    expression(epsilon))) +
+      theme_bw() +
+      theme(legend.position = pos.legend,
+            legend.title = element_blank()) +
+      labs(x = "Random Effects", y = "Density") +
+      opts;
 }
 
 
@@ -42,9 +47,14 @@ baPltTcell <- function(par.err, par.other, nreps = 100000, pos.legend = c(0.8, 0
     dta.outcome  <- rbind(data.frame(Outcome = "Y0", Y = test.outcome$y0),
                           data.frame(Outcome = "Y1", Y = test.outcome$y1));
 
-    yplot <- ggplot(data = dta.outcome, aes(x = Y, fill = Outcome, col = Outcome)) +
+    yplot <- ggplot(data = dta.outcome, aes(x = Y,
+                                            fill     = Outcome,
+                                            linetype = Outcome,
+                                            col      = Outcome)) +
         geom_histogram(aes(y = ..count../sum(..count..)),
-                       alpha = 0.1, position = "identity", na.rm = TRUE, ...) +
+                       alpha = 0.1,
+                       position = "identity",
+                       na.rm = TRUE, ...) +
         labs(x = "T-Cell Counts", y = "Proportion") +
         theme_bw() +
         theme(legend.position = pos.legend,
