@@ -218,3 +218,24 @@ NULL
 #' @param ... Reserved parameters
 #'
 NULL
+
+
+#' Example dataset
+#'
+#' @description An example dataset from an assay experiment for eliciting ICC
+#'
+#' @docType data
+#'
+#' @name ex_data
+#'
+#' @usage data(ex_data)
+#'
+#' @format A dataframe with the following variables:
+#' \describe{
+#'   \item{BatchID}{Batch ID}
+#'   \item{Week}{Week when the experiment was done, i.e., time effect}
+#'   \item{Concentration}{Concentration level}
+#'   \item{Y}{Log transformed outcome}
+#' }
+#'
+NULL
