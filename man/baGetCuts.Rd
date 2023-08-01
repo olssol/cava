@@ -6,6 +6,20 @@
 \usage{
 baGetCuts(par.err, par.other, rates, f.simu = baSimuTcell, ..., seed = NULL)
 }
+\arguments{
+\item{par.err}{a list of gamma, delta, epsilon error}
+
+\item{par.other}{other parameters including u0, u1, v, and beta}
+
+\item{rates}{response rates}
+
+\item{f.simu}{simulating function}
+
+\item{nreps}{number of repetitions}
+}
+\value{
+a list of cut off given the response rates
+}
 \description{
 Get cut off of the outcome to get given response rates
 }

@@ -15,6 +15,24 @@ baPltTcell(
   ry.quants = c(0.1, 0.5, 0.9)
 )
 }
+\arguments{
+\item{par.err}{a list of gamma, delta, epsilon error}
+
+\item{par.other}{other parameters including u0, u1, v, and beta}
+
+\item{nreps}{number of repetitions}
+
+\item{pos.legend}{legend position}
+
+\item{f.simu}{simulating function}
+
+\item{fname}{file name to save to}
+
+\item{ry.quants}{quantiles}
+}
+\value{
+a plot of histogram of t-cells Y0 Y1 and Y1/Y0 for a given scenario
+}
 \description{
 Plot histogram of t-cells Y0 Y1 and Y1/Y0 for a given scenario
 }

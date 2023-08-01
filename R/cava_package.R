@@ -154,7 +154,7 @@
 #' @section Graphical user interface:
 #'
 #' This package provides a web-based graphical user interface developed using R
-#' Shiny. See \code{\link{vtShiny}} for details.
+#' Shiny. See \code{\link{cvShiny}} for details.
 #'
 #' @references
 #'

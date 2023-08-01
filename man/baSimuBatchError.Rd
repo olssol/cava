@@ -6,10 +6,20 @@
 \usage{
 baSimuBatchError(
   bsize,
-  par.err = list(gamma = list(error.type = "normal", sig = 1), delta = list(error.type
-    = "normal", sig = 1), epsilon = list(error.type = "normal", sig = 1)),
+  par.err = list(gamma = list(error.type = "normal", sig = 1), delta = list(error.type =
+    "normal", sig = 1), epsilon = list(error.type = "normal", sig = 1)),
   nreps = 1e+06
 )
+}
+\arguments{
+\item{bsize}{batch size}
+
+\item{par.err}{a list of gamma, delta, epsilon error}
+
+\item{nreps}{number of repetitions}
+}
+\value{
+a list of gamma, delta, and epsilon error
 }
 \description{
 Simulate errors for all batches

@@ -34,7 +34,7 @@ levels.}
 \item{6:}{\eqn{\theta_{11}}}
 }
 
-See \code{\link{visit}} for details.}
+See \code{\link[visit]{plot.VTTRUEPS}} for details.}
 
 \item{legends}{Line legends}
 

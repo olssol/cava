@@ -34,7 +34,16 @@ plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6)) {
 
 #' Plot histogram of t-cells Y0 Y1 and Y1/Y0 for a given scenario
 #'
-#'
+#' @param par.err a list of gamma, delta, epsilon error
+#' @param par.other other parameters including u0, u1, v, and beta 
+#' @param nreps number of repetitions
+#' @param pos.legend legend position
+#' @param f.simu simulating function
+#' @param fname file name to save to
+#' @param ry.quants quantiles
+#' 
+#' @return a plot of histogram of t-cells Y0 Y1 and Y1/Y0 for a given scenario
+#' 
 #' @export
 #'
 baPltTcell <- function(par.err, par.other, nreps = 100000, pos.legend = c(0.8, 0.6),
@@ -81,7 +90,10 @@ baPltTcell <- function(par.err, par.other, nreps = 100000, pos.legend = c(0.8, 0
 
 #' Plot histogram of t-cells Y0 Y1 and Y1/Y0 for all scenarios
 #'
-#'
+#' @param lst.par a list containing par.err and par.other as described in \code{baPltTcell}
+#' @param xlims x limit of the plot
+#' @param ylims y limit of the plot
+#' @param label label for the plot
 #' @export
 #'
 baPltAllTcell <- function(lst.par, xlims = list(c(-1,1), c(0,2000), c(0,20)),

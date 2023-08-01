@@ -6,6 +6,13 @@
 \usage{
 baBatInd(batch.sizes)
 }
+\arguments{
+\item{batch.sizes}{a vector of batch sizes}
+}
+\value{
+a vector where all subjects in batch.sizes are denoted by its batch
+    number, and the length of this vector is total number of subjects.
+}
 \description{
 Get batch indices
 }

@@ -4,7 +4,7 @@
 #'
 #' @details
 #'
-#' A web browser will be brought up for users to access the GUI of \code{\link{visit}}.
+#' A web browser will be brought up for users to access the GUI of \code{\link{cava}}.
 #'
 #' @examples
 #' if(interactive()){

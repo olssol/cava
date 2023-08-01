@@ -1,6 +1,11 @@
 
 #' Get batch indices
 #'
+#' @param batch.sizes a vector of batch sizes
+#' 
+#' @return a vector where all subjects in batch.sizes are denoted by its batch
+#'     number, and the length of this vector is total number of subjects. 
+#' 
 #' @export
 #'
 baBatInd <- function(batch.sizes) {
@@ -14,6 +19,11 @@ baBatInd <- function(batch.sizes) {
 
 #' Define outcome based on longitudinal outcomes
 #'
+#' @param mat.y outcomes represented as a matrix
+#' @param type type of longitudinal outcomes
+#'
+#' @return if type is "base", the first column is returned. Otherwise
+#'     the ratio of last column and first column is returned.
 #'
 #' @export
 #'
@@ -28,7 +38,13 @@ baGetOutcome <- function(mat.y, type = c("ratio", "change", "base")) {
 
 #' Simulate NB using mu and phi instead of n and phi
 #'
-#'
+#' @param mu mean
+#' @param phi target for number of successful trials
+#' @param n (Optional) number of observations
+#' @param is.log logical; if TRUE, mu, phi are are given as log(mu) and log(phi)
+#' 
+#' @return Negative Binomial Distribution with n as length of mu
+#' 
 #' @export
 #'
 baRNB <- function(mu, phi, n = NULL, is.log = TRUE) {

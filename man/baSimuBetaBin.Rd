@@ -12,6 +12,10 @@ baSimuBetaBin(bsize, p, rho = 0, seed = NULL, nreps = 1e+06)
 \item{p}{mean of the Beta distribution a/(a+b)}
 
 \item{rho}{inter-class correlation 1/(a+b+1)}
+
+\item{seed}{Seed}
+
+\item{nrep}{number of repetitions}
 }
 \value{
 Simulated binary outcomes by batches

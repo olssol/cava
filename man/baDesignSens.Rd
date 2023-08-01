@@ -8,6 +8,8 @@ baDesignSens(rhos, design, ..., seed = NULL)
 }
 \arguments{
 \item{design}{A list with p0, p1, batch size, n1, r1, n, r}
+
+\item{rho}{a vector inter-class correlation 1/(a+b+1)}
 }
 \description{
 Get type I error and power given p0, p1, rho, batch size, n1, r1, n, r

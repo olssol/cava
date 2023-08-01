@@ -14,6 +14,24 @@ baSimuError(
   skew.noise = 0.001
 )
 }
+\arguments{
+\item{n}{sample size}
+
+\item{error.type}{normal or skewed}
+
+\item{sig}{standard deviation}
+
+\item{mu}{mean}
+
+\item{skew.mu}{if skewed, by how much}
+
+\item{skew.phi}{if skewed, by how much}
+
+\item{skew.noise}{if skewed, contains how much noise}
+}
+\value{
+check detail for exact computation
+}
 \description{
 Simulate random error
 }

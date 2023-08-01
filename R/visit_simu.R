@@ -3,7 +3,7 @@
 #' @param x object
 #' @param ... reserved parameters
 #'
-#'
+#' @export 
 summary2 <- function (x, ...) {
     UseMethod("summary2", x)
 }
@@ -405,7 +405,7 @@ summary2.VTSIMU <- function(x, ...) {
 #' \item{6:}{\eqn{\theta_{11}}}
 #' }
 #'
-#' See \code{\link{visit}} for details.
+#' See \code{\link[visit]{plot.VTTRUEPS}} for details.
 #'
 #' @param legends Line legends
 #' @param ltys Line types

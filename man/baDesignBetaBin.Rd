@@ -14,6 +14,21 @@ baDesignBetaBin(
   seed = NULL
 )
 }
+\arguments{
+\item{rho}{inter-class correlation 1/(a+b+1)}
+
+\item{nmin}{minimum number of subjects}
+
+\item{nmax}{maximum number of subjects}
+
+\item{seed}{Seed}
+
+\item{bsize}{batch size, can be list or an integer}
+}
+\value{
+a list of simon's two stage designs containing the optimal and
+    minimax designs for all possible batch sizes
+}
 \description{
 Get designs for BetaBinomial designs
 }

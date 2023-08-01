@@ -6,6 +6,15 @@
 \usage{
 baGetOutcome(mat.y, type = c("ratio", "change", "base"))
 }
+\arguments{
+\item{mat.y}{outcomes represented as a matrix}
+
+\item{type}{type of longitudinal outcomes}
+}
+\value{
+if type is "base", the first column is returned. Otherwise
+    the ratio of last column and first column is returned.
+}
 \description{
 Define outcome based on longitudinal outcomes
 }
