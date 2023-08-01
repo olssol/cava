@@ -15,15 +15,19 @@ baDesignBetaBin(
 )
 }
 \arguments{
+\item{par.design}{design parameters (ALPHA, POWER, P0, P1)}
+
 \item{rho}{inter-class correlation 1/(a+b+1)}
+
+\item{bsizes}{batch size, can be list or an integer}
 
 \item{nmin}{minimum number of subjects}
 
 \item{nmax}{maximum number of subjects}
 
-\item{seed}{Seed}
+\item{...}{reserved parameters}
 
-\item{bsize}{batch size, can be list or an integer}
+\item{seed}{Seed}
 }
 \value{
 a list of simon's two stage designs containing the optimal and

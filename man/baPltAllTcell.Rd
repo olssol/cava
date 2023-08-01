@@ -20,6 +20,8 @@ baPltAllTcell(
 \item{ylims}{y limit of the plot}
 
 \item{label}{label for the plot}
+
+\item{...}{reserved parameters}
 }
 \description{
 Plot histogram of t-cells Y0 Y1 and Y1/Y0 for all scenarios

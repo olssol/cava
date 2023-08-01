@@ -31,6 +31,8 @@ proliferation model}
 \item{threshold}{threshold to be considered response}
 
 \item{take_exp}{whether the proliferation model is log transformed}
+
+\item{seed}{Seed}
 }
 \value{
 Estimated ICC with its (bootstrap) SD.

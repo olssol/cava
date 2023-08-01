@@ -15,7 +15,7 @@ baSimuBetaBin(bsize, p, rho = 0, seed = NULL, nreps = 1e+06)
 
 \item{seed}{Seed}
 
-\item{nrep}{number of repetitions}
+\item{nreps}{number of repetitions}
 }
 \value{
 Simulated binary outcomes by batches

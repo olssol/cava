@@ -14,6 +14,8 @@ baGetBvrCvIcc(par.err, par.other, rates, f.simu = baSimuTcell, ...)
 \item{rates}{response rates}
 
 \item{f.simu}{simulating function}
+
+\item{...}{reserved parameters}
 }
 \value{
 a list containing CV, batch effect variance ratio, and ICC

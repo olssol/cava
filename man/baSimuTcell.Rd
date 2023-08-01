@@ -14,6 +14,8 @@ baSimuTcell(bsize, par.err, par.other, nreps = 1e+06, ...)
 \item{par.other}{other parameters including u0, u1, v, and beta}
 
 \item{nreps}{number of repetitions}
+
+\item{...}{reserved parameters}
 }
 \value{
 simulation of t-cell counts with given parameters

@@ -22,6 +22,8 @@ baDesignSensSingle(rho, p0, p1, bsize, n1, r1, nt, r, ...)
 \item{nt}{total sample size}
 
 \item{r}{second stage response rate}
+
+\item{...}{reserved parameters}
 }
 \value{
 a vector containing error, power, en0, pet0, en1, pet1 for the given

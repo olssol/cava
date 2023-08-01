@@ -28,6 +28,8 @@ baPltTcell(
 
 \item{fname}{file name to save to}
 
+\item{...}{reserved parameters}
+
 \item{ry.quants}{quantiles}
 }
 \value{

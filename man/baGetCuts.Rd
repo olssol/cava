@@ -15,7 +15,9 @@ baGetCuts(par.err, par.other, rates, f.simu = baSimuTcell, ..., seed = NULL)
 
 \item{f.simu}{simulating function}
 
-\item{nreps}{number of repetitions}
+\item{...}{reserved parameters}
+
+\item{seed}{Seed}
 }
 \value{
 a list of cut off given the response rates
