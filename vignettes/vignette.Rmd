@@ -38,10 +38,24 @@ is accounted for.
 # Conduct Simulation and Designs
 
 ## baSimuBetaBin
+Simulate batch data from Beta-Binomial with the given parameters. 
+```{r, eval = TRUE, echo = FALSE, message = TRUE}
+baSimuBetaBin(4, 0.2, rho = 0.5);
+```
 
 ## baDesignBetaBin
+Get designs from BetaBinomial designs with given parameters. 
+```{r, eval = TRUE, echo = FALSE, message = TRUE}
 
-## baSimuTcell
+par.design <-  NULL;
+par.design$P0 <- 0.2;
+par.design$P1 <- 0.4;
+par.design$ALPHA <- 1;
+par.design$BETA <- 1;
+
+baDesignBetaBin(par.design, rho = 1, bsizes = 2, nmin = 10, nmax = 20)
+```
+
 
 # Graphical User Interface (GUI)
 
