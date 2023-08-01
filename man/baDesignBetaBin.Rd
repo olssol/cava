@@ -21,9 +21,9 @@ baDesignBetaBin(
 
 \item{bsizes}{batch size, can be list or an integer}
 
-\item{nmin}{minimum number of subjects}
+\item{nmin}{minimum sample size}
 
-\item{nmax}{maximum number of subjects}
+\item{nmax}{maximum sample size}
 
 \item{...}{reserved parameters}
 

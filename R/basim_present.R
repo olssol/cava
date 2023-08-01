@@ -1,7 +1,8 @@
 #' S3 method for plotting the random error
 #'
-#'
-#'
+#' @param x ClsBaErr object
+#' @param opts optional parameters
+#' @param pos.legend legend position
 #'
 plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6)) {
     dta <- rbind(data.frame(Type = "gamma", Error = x$gamma),

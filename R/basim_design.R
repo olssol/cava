@@ -3,8 +3,8 @@
 #' @param par.design design parameters (ALPHA, POWER, P0, P1)
 #' @param rho inter-class correlation 1/(a+b+1)
 #' @param bsizes batch size, can be list or an integer
-#' @param nmin minimum number of subjects
-#' @param nmax maximum number of subjects
+#' @param nmin minimum sample size
+#' @param nmax maximum sample size
 #' @param seed Seed
 #' @param ... reserved parameters
 #' 

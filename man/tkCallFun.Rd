@@ -8,6 +8,8 @@ tkCallFun(vec, ...)
 }
 \arguments{
 \item{vec}{function names as a vector}
+
+\item{...}{reserved parameters}
 }
 \description{
 Call function by its name organized as a vector
