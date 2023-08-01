@@ -30,7 +30,7 @@ considered too toxic}
 
 \item{dec.cut}{Thresholds \eqn{C_1,C_2,C_3}. If the vector length is shorter
 than \eqn{3}, it is repeated to have \eqn{3} elements. See
-\code{\link{visit}} for details.}
+\code{\link[visit]{parameter}} for details.}
 
 \item{prob.mdl}{Option of the probability models:
 
@@ -42,7 +42,7 @@ than \eqn{3}, it is repeated to have \eqn{3} elements. See
 
 \item{PARA+: }{partially parametric+ model} }
 
-Default value is \code{NONPARA}. See \code{\link{visit}} for details.}
+Default value is \code{NONPARA}. See \code{\link[visit]{parameter}} for details.}
 
 \item{priors}{A class \code{VTPRIOR} object created by
 \code{\link{vtPriorPar}} for \code{PARA} and \code{PARA+} model.}

@@ -25,7 +25,7 @@ vtStan(obs.y, priors, model = 0, iter = 4000, chains = 4, warmup = 2000, ...)
   \item{0:}{parametric model}
   \item{1:}{parametric+ model}
 }
-See \code{\link{visit}} for details.}
+See \code{\link[visit]{vtStan}} for details.}
 
 \item{iter}{STAN option: number of iterations}
 
