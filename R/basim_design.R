@@ -1,11 +1,12 @@
 #' Get designs for BetaBinomial designs
 #'
-#' @param par.design
+#' @param par.design design parameters (ALPHA, POWER, P0, P1)
 #' @param rho inter-class correlation 1/(a+b+1)
-#' @param bsize batch size, can be list or an integer
+#' @param bsizes batch size, can be list or an integer
 #' @param nmin minimum number of subjects
 #' @param nmax maximum number of subjects
 #' @param seed Seed
+#' @param ... reserved parameters
 #' 
 #' @return a list of simon's two stage designs containing the optimal and
 #'     minimax designs for all possible batch sizes 
@@ -89,7 +90,8 @@ baGetRejRate <- function(yp0, yp1, n1, r1, nt, r, bsize = 1) {
 #' @param r1 first stage response rate
 #' @param nt total sample size
 #' @param r  second stage response rate
-#'
+#' @param ... reserved parameters
+#' 
 #' @return a vector containing error, power, en0, pet0, en1, pet1 for the given
 #'     rho
 #'
@@ -114,8 +116,10 @@ baDesignSensSingle <- function(rho, p0, p1, bsize, n1, r1, nt, r, ...) {
 #'
 #' Get type I error and power given p0, p1, rho, batch size, n1, r1, n, r
 #'
-#' @param rho a vector inter-class correlation 1/(a+b+1)
+#' @param rhos a vector inter-class correlation 1/(a+b+1)
 #' @param design A list with p0, p1, batch size, n1, r1, n, r
+#' @param ... reserved parameters
+#' @param seed Seed
 #' 
 #' @export
 #'

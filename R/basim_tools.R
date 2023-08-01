@@ -117,7 +117,8 @@ baElicitFitMix <- function(dat, fml, des_mu = 1, nbs = 1000) {
 #' @param ntest number of replications
 #' @param threshold threshold to be considered response
 #' @param take_exp whether the proliferation model is log transformed
-#'
+#' @param seed Seed 
+#' 
 #' @return Estimated ICC with its (bootstrap) SD.
 #'
 #' @export

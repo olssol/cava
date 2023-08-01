@@ -40,6 +40,7 @@ plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6)) {
 #' @param pos.legend legend position
 #' @param f.simu simulating function
 #' @param fname file name to save to
+#' @param ... reserved parameters
 #' @param ry.quants quantiles
 #' 
 #' @return a plot of histogram of t-cells Y0 Y1 and Y1/Y0 for a given scenario
@@ -94,6 +95,8 @@ baPltTcell <- function(par.err, par.other, nreps = 100000, pos.legend = c(0.8, 0
 #' @param xlims x limit of the plot
 #' @param ylims y limit of the plot
 #' @param label label for the plot
+#' @param ... reserved parameters 
+#'
 #' @export
 #'
 baPltAllTcell <- function(lst.par, xlims = list(c(-1,1), c(0,2000), c(0,20)),

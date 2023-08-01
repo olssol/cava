@@ -4,7 +4,7 @@
 #' @param p mean of the Beta distribution a/(a+b)
 #' @param rho inter-class correlation 1/(a+b+1)
 #' @param seed Seed
-#' @param nrep number of repetitions
+#' @param nreps number of repetitions
 #' 
 #' @return Simulated binary outcomes by batches
 #' 
@@ -117,6 +117,7 @@ baSimuBatchError <- function(bsize,
 #' @param par.err a list of gamma, delta, epsilon error
 #' @param par.other other parameters including u0, u1, v, and beta 
 #' @param nreps number of repetitions
+#' @param ... reserved parameters
 #' 
 #' @return simulation of t-cell counts with given parameters
 #' 
@@ -155,7 +156,8 @@ baSimuTcell <- function(bsize, par.err, par.other, nreps = 1000000, ...) {
 #' @param par.other other parameters including u0, u1, v, and beta 
 #' @param rates response rates
 #' @param f.simu simulating function
-#' @param nreps number of repetitions
+#' @param ... reserved parameters
+#' @param seed Seed
 #' 
 #' @return a list of cut off given the response rates
 #' 
@@ -183,6 +185,7 @@ baGetCuts <- function(par.err, par.other, rates, f.simu = baSimuTcell, ..., seed
 #' @param par.other other parameters including u0, u1, v, and beta 
 #' @param rates response rates
 #' @param f.simu simulating function
+#' @param ... reserved parameters
 #' 
 #' @return a list containing CV, batch effect variance ratio, and ICC
 #'
