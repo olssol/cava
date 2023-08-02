@@ -23,6 +23,7 @@ tkExpRst <- function(numbers, template.f,  out.f="rst.txt", sub.str="AA") {
 
     ##write out
     write(tpla, file=out.f);
+    return();
 }
 
 
