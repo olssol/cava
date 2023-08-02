@@ -7,5 +7,11 @@
 bacSimonDesign(y0, y1, nmax, nmin, bsize, alpha, beta)
 }
 \description{
-Simon's two-stage design
+@param y0 response 0
+ @param y1 response 1
+ @param nmax maximum size
+ @param nmin minimum size
+ @param bsize batch size
+ @param alpha observed alpha from simulations
+ @param beta observed beta from simulations.
 }

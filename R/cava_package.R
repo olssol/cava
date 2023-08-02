@@ -12,7 +12,7 @@
 #' @importFrom parallel detectCores
 #' @importFrom utils as.roman
 #' @importFrom lme4 lmer VarCorr
-#' @importFrom ggplot2 ggplot scale_x_continuous scale_y_continuous plot_grid aes geom_histogram labs theme_bw theme element_blank geom_density geom_vline save_plot scale_color_manual scale_linetype_manual element_blank
+#' @importFrom ggplot2 ggplot scale_x_continuous scale_y_continuous aes geom_histogram labs theme_bw theme element_blank geom_density geom_vline scale_color_manual scale_linetype_manual element_blank
 #' @import stats
 #' @import Rcpp
 #' @import methods

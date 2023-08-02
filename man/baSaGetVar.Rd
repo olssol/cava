@@ -2,12 +2,17 @@
 % Please edit documentation in R/RcppExports.R
 \name{baSaGetVar}
 \alias{baSaGetVar}
-\title{Get variance given batch sizes, response rate and ICC
- @export}
+\title{Get variance given batch sizes, response rate and ICC}
 \usage{
 baSaGetVar(bsizes, p, rho)
 }
+\arguments{
+\item{bsizes}{a vector of batch sizes}
+
+\item{p}{response rate}
+
+\item{rho}{inter-class correlations}
+}
 \description{
 Get variance given batch sizes, response rate and ICC
- @export
 }

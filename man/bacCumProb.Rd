@@ -6,6 +6,15 @@
 \usage{
 bacCumProb(y, nmax, nmin, bsize)
 }
+\arguments{
+\item{y}{response}
+
+\item{nmax}{maximum size}
+
+\item{nmin}{minimum size}
+
+\item{bsize}{batch size}
+}
 \value{
 A matrix with 2*nmax rows. Row 1-nmax is marginal P(x = r|n)
         Row nmax-2*nmax P(x<=r|n);

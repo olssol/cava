@@ -2,18 +2,32 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 #' PDF of single batch
+#' 
+#' @param y response
+#' 
 #' @export
 bacBatchFreq <- function(y) {
     .Call('_cava_bacBatchFreq', PACKAGE = 'cava', y)
 }
 
 #' Probability of (n = n, r = 0:n)
+#' 
+#' @param n sample size
+#' @param bsize batch size
+#' @param pmat probability matrix
+#' 
 #' @export
 bacProb <- function(n, bsize, pmat) {
     .Call('_cava_bacProb', PACKAGE = 'cava', n, bsize, pmat)
 }
 
 #' Prepare probabilities
+#' 
+#' @param y response
+#' @param nmax maximum size
+#' @param nmin minimum size
+#' @param bsize batch size
+#' 
 #' @return A matrix with 2*nmax rows. Row 1-nmax is marginal P(x = r|n)
 #'         Row nmax-2*nmax P(x<=r|n);
 #' @export
@@ -22,42 +36,88 @@ bacCumProb <- function(y, nmax, nmin, bsize) {
 }
 
 #' Single Simon 2-stage
+#' 
+#'  @param cumu cumulative binomial distribution
+#'  @param n1 first stage sample size
+#'  @param r1 first stage response rate
+#'  @param n total sample size
+#'  @param r  second stage response rate
+#' 
 #' @export
 bacSimonSingle <- function(cumu, n1, r1, n, r) {
     .Call('_cava_bacSimonSingle', PACKAGE = 'cava', cumu, n1, r1, n, r)
 }
 
 #' Simon's two-stage design 
+#' 
+#'  @param y0 response 0
+#'  @param y1 response 1
+#'  @param nmax maximum size
+#'  @param nmin minimum size
+#'  @param bsize batch size
+#'  @param alpha observed alpha from simulations
+#'  @param beta observed beta from simulations.
+#' 
 #' @export
 bacSimonDesign <- function(y0, y1, nmax, nmin, bsize, alpha, beta) {
     .Call('_cava_bacSimonDesign', PACKAGE = 'cava', y0, y1, nmax, nmin, bsize, alpha, beta)
 }
 
 #' Get InterClass Correlation
+#'
+#' @param ys responses
+#'
 #' @export
 bacICC <- function(ys) {
     .Call('_cava_bacICC', PACKAGE = 'cava', ys)
 }
 
 #' Get batch sizes to get the total n
+#'
+#' @param n sample size
+#' @param bsize batch size
+#'
 #' @export
 baBatches <- function(n, bsize) {
     .Call('_cava_baBatches', PACKAGE = 'cava', n, bsize)
 }
 
 #' Get variance given batch sizes, response rate and ICC
-#'  @export
+#'
+#' @param bsizes a vector of batch sizes
+#' @param p response rate 
+#' @param rho inter-class correlations
+#'
+#' @export
 baSaGetVar <- function(bsizes, p, rho) {
     .Call('_cava_baSaGetVar', PACKAGE = 'cava', bsizes, p, rho)
 }
 
 #' Get actuarial type I and II error in Sargent method
+#'
+#' @param bsizes a vector of batch sizes
+#' @param r response rate
+#' @param p0 null hypothesis
+#' @param p1 alt hypothesis
+#' @param rho0 rho0
+#' @param rho1 rho1
+#'
 #' @export
 baSaAlphaBeta <- function(bsizes, r, p0, p1, rho0, rho1) {
     .Call('_cava_baSaAlphaBeta', PACKAGE = 'cava', bsizes, r, p0, p1, rho0, rho1)
 }
 
 #' Get Design type I and II error using Sargent method
+#' 
+#' @param nmin minimum sample size
+#' @param bsize batch size
+#' @param alpha observed alpha from simulations
+#' @param beta observed beta from simulations
+#' @param p0 null hypothesis
+#' @param p1 alt hypothesis
+#' @param rho0 rho0
+#' @param rho1 rho1
+#' 
 #' @export
 baSaDesign <- function(nmin, bsize, alpha, beta, p0, p1, rho0, rho1) {
     .Call('_cava_baSaDesign', PACKAGE = 'cava', nmin, bsize, alpha, beta, p0, p1, rho0, rho1)

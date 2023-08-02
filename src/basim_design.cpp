@@ -8,6 +8,9 @@ NumericVector baBatches(int n, int bsize);
 
 
 //' PDF of single batch
+//' 
+//' @param y response
+//' 
 //' @export
 // [[Rcpp::export]]
 NumericMatrix bacBatchFreq(NumericMatrix y) {
@@ -39,6 +42,11 @@ NumericMatrix bacBatchFreq(NumericMatrix y) {
 
 
 //' Probability of (n = n, r = 0:n)
+//' 
+//' @param n sample size
+//' @param bsize batch size
+//' @param pmat probability matrix
+//' 
 //' @export
 // [[Rcpp::export]]
 NumericMatrix bacProb(int n, int bsize, NumericMatrix pmat) {
@@ -101,6 +109,12 @@ void tkProb(NumericMatrix y, int nmax, int nmin,  int bsize,
 }
 
 //' Prepare probabilities
+//' 
+//' @param y response
+//' @param nmax maximum size
+//' @param nmin minimum size
+//' @param bsize batch size
+//' 
 //' @return A matrix with 2*nmax rows. Row 1-nmax is marginal P(x = r|n)
 //'         Row nmax-2*nmax P(x<=r|n);
 //' @export
@@ -126,6 +140,13 @@ NumericMatrix bacCumProb(NumericMatrix y, int nmax, int nmin,  int bsize) {
 }
 
 //' Single Simon 2-stage
+//' 
+//'  @param cumu cumulative binomial distribution
+//'  @param n1 first stage sample size
+//'  @param r1 first stage response rate
+//'  @param n total sample size
+//'  @param r  second stage response rate
+//' 
 //' @export
 // [[Rcpp::export]]
 NumericVector bacSimonSingle(NumericMatrix cumu, int n1, int r1, int n, int r) {
@@ -149,6 +170,15 @@ NumericVector bacSimonSingle(NumericMatrix cumu, int n1, int r1, int n, int r) {
 }
 
 //' Simon's two-stage design 
+//' 
+//'  @param y0 response 0
+//'  @param y1 response 1
+//'  @param nmax maximum size
+//'  @param nmin minimum size
+//'  @param bsize batch size
+//'  @param alpha observed alpha from simulations
+//'  @param beta observed beta from simulations.
+//' 
 //' @export
 // [[Rcpp::export]]
 NumericMatrix bacSimonDesign(NumericMatrix y0, NumericMatrix y1, int nmax, int nmin,

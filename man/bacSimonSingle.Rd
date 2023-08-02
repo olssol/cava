@@ -7,5 +7,9 @@
 bacSimonSingle(cumu, n1, r1, n, r)
 }
 \description{
-Single Simon 2-stage
+@param cumu cumulative binomial distribution
+ @param n1 first stage sample size
+ @param r1 first stage response rate
+ @param n total sample size
+ @param r  second stage response rate
 }
