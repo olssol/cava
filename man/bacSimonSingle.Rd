@@ -6,10 +6,17 @@
 \usage{
 bacSimonSingle(cumu, n1, r1, n, r)
 }
+\arguments{
+\item{cumu}{cumulative binomial distribution}
+
+\item{n1}{first stage sample size}
+
+\item{r1}{first stage response rate}
+
+\item{n}{total sample size}
+
+\item{r}{second stage response rate}
+}
 \description{
-@param cumu cumulative binomial distribution
- @param n1 first stage sample size
- @param r1 first stage response rate
- @param n total sample size
- @param r  second stage response rate
+Single Simon 2-stage
 }

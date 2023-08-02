@@ -141,11 +141,11 @@ NumericMatrix bacCumProb(NumericMatrix y, int nmax, int nmin,  int bsize) {
 
 //' Single Simon 2-stage
 //' 
-//'  @param cumu cumulative binomial distribution
-//'  @param n1 first stage sample size
-//'  @param r1 first stage response rate
-//'  @param n total sample size
-//'  @param r  second stage response rate
+//' @param cumu cumulative binomial distribution
+//' @param n1 first stage sample size
+//' @param r1 first stage response rate
+//' @param n total sample size
+//' @param r  second stage response rate
 //' 
 //' @export
 // [[Rcpp::export]]
@@ -171,13 +171,13 @@ NumericVector bacSimonSingle(NumericMatrix cumu, int n1, int r1, int n, int r) {
 
 //' Simon's two-stage design 
 //' 
-//'  @param y0 response 0
-//'  @param y1 response 1
-//'  @param nmax maximum size
-//'  @param nmin minimum size
-//'  @param bsize batch size
-//'  @param alpha observed alpha from simulations
-//'  @param beta observed beta from simulations.
+//' @param y0 response 0
+//' @param y1 response 1
+//' @param nmax maximum size
+//' @param nmin minimum size
+//' @param bsize batch size
+//' @param alpha observed alpha from simulations
+//' @param beta observed beta from simulations.
 //' 
 //' @export
 // [[Rcpp::export]]

@@ -6,12 +6,21 @@
 \usage{
 bacSimonDesign(y0, y1, nmax, nmin, bsize, alpha, beta)
 }
+\arguments{
+\item{y0}{response 0}
+
+\item{y1}{response 1}
+
+\item{nmax}{maximum size}
+
+\item{nmin}{minimum size}
+
+\item{bsize}{batch size}
+
+\item{alpha}{observed alpha from simulations}
+
+\item{beta}{observed beta from simulations.}
+}
 \description{
-@param y0 response 0
- @param y1 response 1
- @param nmax maximum size
- @param nmin minimum size
- @param bsize batch size
- @param alpha observed alpha from simulations
- @param beta observed beta from simulations.
+Simon's two-stage design
 }
