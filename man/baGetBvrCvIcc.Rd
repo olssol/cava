@@ -6,6 +6,20 @@
 \usage{
 baGetBvrCvIcc(par.err, par.other, rates, f.simu = baSimuTcell, ...)
 }
+\arguments{
+\item{par.err}{a list of gamma, delta, epsilon error}
+
+\item{par.other}{other parameters including u0, u1, v, and beta}
+
+\item{rates}{response rates}
+
+\item{f.simu}{simulating function}
+
+\item{...}{reserved parameters}
+}
+\value{
+a list containing CV, batch effect variance ratio, and ICC
+}
 \description{
 Get CV, batch effect variance ratio and ICC
 }

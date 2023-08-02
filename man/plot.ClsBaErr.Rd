@@ -6,6 +6,13 @@
 \usage{
 \method{plot}{ClsBaErr}(x, opts = NULL, pos.legend = c(0.8, 0.6))
 }
+\arguments{
+\item{x}{ClsBaErr object}
+
+\item{opts}{optional parameters}
+
+\item{pos.legend}{legend position}
+}
 \description{
 S3 method for plotting the random error
 }

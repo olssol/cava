@@ -6,6 +6,19 @@
 \usage{
 baSaAlphaBeta(bsizes, r, p0, p1, rho0, rho1)
 }
+\arguments{
+\item{bsizes}{a vector of batch sizes}
+
+\item{r}{response rate}
+
+\item{p0}{null hypothesis}
+
+\item{p1}{alt hypothesis}
+
+\item{rho0}{rho0}
+
+\item{rho1}{rho1}
+}
 \description{
 Get actuarial type I and II error in Sargent method
 }

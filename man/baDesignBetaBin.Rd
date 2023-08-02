@@ -14,6 +14,25 @@ baDesignBetaBin(
   seed = NULL
 )
 }
+\arguments{
+\item{par.design}{design parameters (ALPHA, POWER, P0, P1)}
+
+\item{rho}{inter-class correlation 1/(a+b+1)}
+
+\item{bsizes}{batch size, can be list or an integer}
+
+\item{nmin}{minimum sample size}
+
+\item{nmax}{maximum sample size}
+
+\item{...}{reserved parameters}
+
+\item{seed}{Seed}
+}
+\value{
+a list of simon's two stage designs containing the optimal and
+    minimax designs for all possible batch sizes
+}
 \description{
 Get designs for BetaBinomial designs
 }

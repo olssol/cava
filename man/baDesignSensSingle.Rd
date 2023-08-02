@@ -6,6 +6,29 @@
 \usage{
 baDesignSensSingle(rho, p0, p1, bsize, n1, r1, nt, r, ...)
 }
+\arguments{
+\item{rho}{inter-class correlation}
+
+\item{p0}{null hypothesis probability}
+
+\item{p1}{alternative hypothesis probability}
+
+\item{bsize}{batch size}
+
+\item{n1}{first stage sample size}
+
+\item{r1}{first stage response rate}
+
+\item{nt}{total sample size}
+
+\item{r}{second stage response rate}
+
+\item{...}{reserved parameters}
+}
+\value{
+a vector containing error, power, en0, pet0, en1, pet1 for the given
+    rho
+}
 \description{
 Get type I error and power given p0, p1, rho, batch size, n1, r1, n, r for
 one rho

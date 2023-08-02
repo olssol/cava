@@ -6,6 +6,18 @@
 \usage{
 baRNB(mu, phi, n = NULL, is.log = TRUE)
 }
+\arguments{
+\item{mu}{mean}
+
+\item{phi}{target for number of successful trials}
+
+\item{n}{(Optional) number of observations}
+
+\item{is.log}{logical; if TRUE, mu, phi are are given as log(mu) and log(phi)}
+}
+\value{
+Negative Binomial Distribution with n as length of mu
+}
 \description{
 Simulate NB using mu and phi instead of n and phi
 }

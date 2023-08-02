@@ -6,6 +6,9 @@ using namespace Rcpp;
 
 
 //' Get InterClass Correlation
+//'
+//' @param ys responses
+//'
 //' @export
 // [[Rcpp::export]]
 double bacICC(NumericMatrix ys) {
@@ -50,6 +53,10 @@ double bacICC(NumericMatrix ys) {
 
 
 //' Get batch sizes to get the total n
+//'
+//' @param n sample size
+//' @param bsize batch size
+//'
 //' @export
 // [[Rcpp::export]]
 NumericVector baBatches(int n, int bsize) {
@@ -73,7 +80,12 @@ NumericVector baBatches(int n, int bsize) {
 }
 
 //' Get variance given batch sizes, response rate and ICC
-//'  @export
+//'
+//' @param bsizes a vector of batch sizes
+//' @param p response rate 
+//' @param rho inter-class correlations
+//'
+//' @export
 // [[Rcpp::export]]
 double baSaGetVar(NumericVector bsizes, double p, double rho) {
   int  nb  = bsizes.size();
@@ -89,6 +101,14 @@ double baSaGetVar(NumericVector bsizes, double p, double rho) {
 
 
 //' Get actuarial type I and II error in Sargent method
+//'
+//' @param bsizes a vector of batch sizes
+//' @param r response rate
+//' @param p0 null hypothesis
+//' @param p1 alt hypothesis
+//' @param rho0 rho0
+//' @param rho1 rho1
+//'
 //' @export
 // [[Rcpp::export]]
 NumericVector baSaAlphaBeta(NumericVector bsizes, int r, double p0, double p1, double rho0, double rho1) {
@@ -114,6 +134,16 @@ NumericVector baSaAlphaBeta(NumericVector bsizes, int r, double p0, double p1, d
 }
 
 //' Get Design type I and II error using Sargent method
+//' 
+//' @param nmin minimum sample size
+//' @param bsize batch size
+//' @param alpha observed alpha from simulations
+//' @param beta observed beta from simulations
+//' @param p0 null hypothesis
+//' @param p1 alt hypothesis
+//' @param rho0 rho0
+//' @param rho1 rho1
+//' 
 //' @export
 // [[Rcpp::export]]
 NumericVector baSaDesign(int nmin, int bsize, double alpha, double beta, double p0, double p1,

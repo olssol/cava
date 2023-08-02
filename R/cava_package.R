@@ -11,7 +11,8 @@
 #' @importFrom graphics axis box legend lines par plot points text arrows grid rect
 #' @importFrom parallel detectCores
 #' @importFrom utils as.roman
-#' @importFrom lme4 lmer
+#' @importFrom lme4 lmer VarCorr
+#' @importFrom ggplot2 ggplot scale_x_continuous scale_y_continuous aes geom_histogram labs theme_bw theme element_blank geom_density geom_vline scale_color_manual scale_linetype_manual element_blank
 #' @import stats
 #' @import Rcpp
 #' @import methods
@@ -154,7 +155,7 @@
 #' @section Graphical user interface:
 #'
 #' This package provides a web-based graphical user interface developed using R
-#' Shiny. See \code{\link{vtShiny}} for details.
+#' Shiny. See \code{\link{cvShiny}} for details.
 #'
 #' @references
 #'
@@ -191,7 +192,7 @@ NULL
 #'
 #' \item{PARA+: }{partially parametric+ model} }
 #'
-#' Default value is \code{NONPARA}. See \code{\link{visit}} for details.
+#' Default value is \code{NONPARA}. See \code{\link[visit]{parameter}} for details.
 #'
 #' @param priors A class \code{VTPRIOR} object created by
 #'     \code{\link{vtPriorPar}} for \code{PARA} and \code{PARA+} model.
@@ -209,7 +210,7 @@ NULL
 #'
 #' @param dec.cut Thresholds \eqn{C_1,C_2,C_3}. If the vector length is shorter
 #'     than \eqn{3}, it is repeated to have \eqn{3} elements. See
-#'     \code{\link{visit}} for details.
+#'     \code{\link[visit]{parameter}} for details.
 #'
 #' @param digits Digits for print
 #'

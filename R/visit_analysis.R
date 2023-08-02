@@ -16,7 +16,7 @@
 #' This function summarizes the posterior distribution of the
 #'     \eqn{\theta^{(l)}_{00}, \theta^{(l)}_{01}, \theta^{(l)}_{10},
 #'     \theta^{(l)}_{11}} and sequentially get the conditional probabilities of
-#'     each decision map region. See \code{\link{visit}} for details of the
+#'     each decision map region. See  \code{\link[visit]{vtDecMap}} for details of the
 #'     decision map regions.
 #'
 #' @return
@@ -105,14 +105,14 @@ vtDecMap <- function(thetas, etas, prev.res=0, dec.cut=0.6) {
 #' Using data from previous levels and the current level to conduct Bayesian
 #' analysis, get the decision map information and make decision about dose
 #' escalation actions. The actions include stop the trial, escalate to the next
-#' higher dose level, or enroll more patients in the current level. See \code{\link{visit}}
-#' for details.
+#' higher dose level, or enroll more patients in the current level. See 
+#'  \code{\link[visit]{plot.vtInterim}} for details.
 #'
 #' @return
 #' A class \code{VTDEC} list containing
 #' \itemize{
 #' \item{prob: }{Probabilities of each decision map region}
-#' \item{region: }{The region selected based on the sequential procedure described in \code{\link{visit}} }
+#' \item{region: }{The region selected based on the sequential procedure described in \code{\link[visit]{vtInterim}} }
 #' \item{ptox: }{Mean risk of DLT, \eqn{E(p^{(l)})}}
 #' \item{pres: }{Mean immune response rate, \eqn{E(q^{(l)})}}
 #' \item{con.prob: }{Conditional probabilities of each decision map region}

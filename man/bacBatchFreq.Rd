@@ -6,6 +6,9 @@
 \usage{
 bacBatchFreq(y)
 }
+\arguments{
+\item{y}{response}
+}
 \description{
 PDF of single batch
 }

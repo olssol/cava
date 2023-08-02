@@ -6,6 +6,9 @@
 \usage{
 bacICC(ys)
 }
+\arguments{
+\item{ys}{responses}
+}
 \description{
 Get InterClass Correlation
 }

@@ -6,6 +6,13 @@
 \usage{
 bacProb(n, bsize, pmat)
 }
+\arguments{
+\item{n}{sample size}
+
+\item{bsize}{batch size}
+
+\item{pmat}{probability matrix}
+}
 \description{
 Probability of (n = n, r = 0:n)
 }

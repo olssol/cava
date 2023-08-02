@@ -22,7 +22,7 @@ This can be a scalar representing the mean of the response rate
 
 \item{dec.cut}{Thresholds \eqn{C_1,C_2,C_3}. If the vector length is shorter
 than \eqn{3}, it is repeated to have \eqn{3} elements. See
-\code{\link{visit}} for details.}
+\code{\link[visit]{parameter}} for details.}
 }
 \value{
 A class \code{VTDEC} list. See the return value from \code{\link{vtInterim}}
@@ -37,7 +37,7 @@ Summarize the posterior distribution of \eqn{\theta^{(l)}_{00},
 This function summarizes the posterior distribution of the
     \eqn{\theta^{(l)}_{00}, \theta^{(l)}_{01}, \theta^{(l)}_{10},
     \theta^{(l)}_{11}} and sequentially get the conditional probabilities of
-    each decision map region. See \code{\link{visit}} for details of the
+    each decision map region. See  \code{\link[visit]{vtDecMap}} for details of the
     decision map regions.
 }
 \examples{

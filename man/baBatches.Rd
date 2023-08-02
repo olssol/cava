@@ -6,6 +6,11 @@
 \usage{
 baBatches(n, bsize)
 }
+\arguments{
+\item{n}{sample size}
+
+\item{bsize}{batch size}
+}
 \description{
 Get batch sizes to get the total n
 }

@@ -43,7 +43,7 @@ tkMakeLocal <- function(alist, dest.env='.GlobalEnv') {
 #' Call function by its name organized as a vector
 #'
 #' @param vec function names as a vector
-#'
+#' @param ... reserved parameters
 #' @export
 #'
 tkCallFun <- function(vec, ...) {

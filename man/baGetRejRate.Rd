@@ -6,6 +6,24 @@
 \usage{
 baGetRejRate(yp0, yp1, n1, r1, nt, r, bsize = 1)
 }
+\arguments{
+\item{yp0}{cumulative binomial distribution of (?)}
+
+\item{yp1}{cumulative binomial distribution of (?)}
+
+\item{n1}{first stage sample size}
+
+\item{r1}{first stage response rate}
+
+\item{nt}{total sample size}
+
+\item{r}{second stage response rate}
+
+\item{bsize}{batch size}
+}
+\value{
+a vector containing error, power, en0, pet0, en1, pet1
+}
 \description{
 Get type I error and power given y0, y1, n1, r1, n, r
 }

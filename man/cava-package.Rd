@@ -155,7 +155,7 @@ For the immune response and the odds ratio, we assume \eqn{q^{(l)}} and
 
 
 This package provides a web-based graphical user interface developed using R
-Shiny. See \code{\link{vtShiny}} for details.
+Shiny. See \code{\link{cvShiny}} for details.
 }
 
 \references{

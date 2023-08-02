@@ -28,11 +28,12 @@ LinkingTo:
     StanHeaders (>= 2.18.1-10)
 RcppModules: stan_fit4visit_mod
 Imports:
-    sqldf (>= 0.4),
-    parallel (>= 3.2)
+    parallel (>= 3.2),
+    lme4 (>= 1.1-34),
+    ggplot2 (>= 3.4.2)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.2.3
 SystemRequirements: GNU make
 NeedsCompilation: yes
 Suggests:

@@ -1,7 +1,16 @@
 #' Get designs for BetaBinomial designs
 #'
-#'
-#'
+#' @param par.design design parameters (ALPHA, POWER, P0, P1)
+#' @param rho inter-class correlation 1/(a+b+1)
+#' @param bsizes batch size, can be list or an integer
+#' @param nmin minimum sample size
+#' @param nmax maximum sample size
+#' @param seed Seed
+#' @param ... reserved parameters
+#' 
+#' @return a list of simon's two stage designs containing the optimal and
+#'     minimax designs for all possible batch sizes 
+#' 
 #' @export
 #'
 baDesignBetaBin <- function(par.design, rho = 0, bsizes = 1, nmin = 10, nmax = 100,
@@ -41,8 +50,16 @@ baDesignBetaBin <- function(par.design, rho = 0, bsizes = 1, nmin = 10, nmax = 1
 
 #' Get type I error and power given y0, y1, n1, r1, n, r
 #'
+#' @param yp0 cumulative binomial distribution of (?)
+#' @param yp1 cumulative binomial distribution of (?)
+#' @param n1 first stage sample size
+#' @param r1 first stage response rate
+#' @param nt total sample size
+#' @param r  second stage response rate
+#' @param bsize batch size
 #'
-#'
+#' @return a vector containing error, power, en0, pet0, en1, pet1
+#' 
 #' @export
 #'
 baGetRejRate <- function(yp0, yp1, n1, r1, nt, r, bsize = 1) {
@@ -65,7 +82,18 @@ baGetRejRate <- function(yp0, yp1, n1, r1, nt, r, bsize = 1) {
 #' Get type I error and power given p0, p1, rho, batch size, n1, r1, n, r for
 #' one rho
 #'
-#'
+#' @param rho inter-class correlation
+#' @param p0 null hypothesis probability
+#' @param p1 alternative hypothesis probability
+#' @param bsize batch size
+#' @param n1 first stage sample size
+#' @param r1 first stage response rate
+#' @param nt total sample size
+#' @param r  second stage response rate
+#' @param ... reserved parameters
+#' 
+#' @return a vector containing error, power, en0, pet0, en1, pet1 for the given
+#'     rho
 #'
 #' @export
 #'
@@ -88,8 +116,11 @@ baDesignSensSingle <- function(rho, p0, p1, bsize, n1, r1, nt, r, ...) {
 #'
 #' Get type I error and power given p0, p1, rho, batch size, n1, r1, n, r
 #'
+#' @param rhos a vector inter-class correlation 1/(a+b+1)
 #' @param design A list with p0, p1, batch size, n1, r1, n, r
-#'
+#' @param ... reserved parameters
+#' @param seed Seed
+#' 
 #' @export
 #'
 baDesignSens <- function(rhos, design, ..., seed = NULL) {

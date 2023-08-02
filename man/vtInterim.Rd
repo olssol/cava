@@ -35,7 +35,7 @@ considered too toxic}
 
 \item{dec.cut}{Thresholds \eqn{C_1,C_2,C_3}. If the vector length is shorter
 than \eqn{3}, it is repeated to have \eqn{3} elements. See
-\code{\link{visit}} for details.}
+\code{\link[visit]{parameter}} for details.}
 
 \item{priors}{A class \code{VTPRIOR} object created by
 \code{\link{vtPriorPar}} for \code{PARA} and \code{PARA+} model.}
@@ -50,7 +50,7 @@ than \eqn{3}, it is repeated to have \eqn{3} elements. See
 
 \item{PARA+: }{partially parametric+ model} }
 
-Default value is \code{NONPARA}. See \code{\link{visit}} for details.}
+Default value is \code{NONPARA}. See \code{\link[visit]{parameter}} for details.}
 
 \item{seed}{Random seed}
 
@@ -60,7 +60,7 @@ Default value is \code{NONPARA}. See \code{\link{visit}} for details.}
 A class \code{VTDEC} list containing
 \itemize{
 \item{prob: }{Probabilities of each decision map region}
-\item{region: }{The region selected based on the sequential procedure described in \code{\link{visit}} }
+\item{region: }{The region selected based on the sequential procedure described in \code{\link[visit]{vtInterim}} }
 \item{ptox: }{Mean risk of DLT, \eqn{E(p^{(l)})}}
 \item{pres: }{Mean immune response rate, \eqn{E(q^{(l)})}}
 \item{con.prob: }{Conditional probabilities of each decision map region}
@@ -76,8 +76,8 @@ Conduct an interim analysis for determining dose escalation actions
 Using data from previous levels and the current level to conduct Bayesian
 analysis, get the decision map information and make decision about dose
 escalation actions. The actions include stop the trial, escalate to the next
-higher dose level, or enroll more patients in the current level. See \code{\link{visit}}
-for details.
+higher dose level, or enroll more patients in the current level. See 
+ \code{\link[visit]{plot.vtInterim}} for details.
 }
 \examples{
 

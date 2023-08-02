@@ -6,6 +6,23 @@
 \usage{
 baSaDesign(nmin, bsize, alpha, beta, p0, p1, rho0, rho1)
 }
+\arguments{
+\item{nmin}{minimum sample size}
+
+\item{bsize}{batch size}
+
+\item{alpha}{observed alpha from simulations}
+
+\item{beta}{observed beta from simulations}
+
+\item{p0}{null hypothesis}
+
+\item{p1}{alt hypothesis}
+
+\item{rho0}{rho0}
+
+\item{rho1}{rho1}
+}
 \description{
 Get Design type I and II error using Sargent method
 }
