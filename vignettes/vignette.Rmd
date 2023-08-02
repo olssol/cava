@@ -50,8 +50,8 @@ Get designs from BetaBinomial designs with given parameters.
 par.design <-  NULL;
 par.design$P0 <- 0.2;
 par.design$P1 <- 0.4;
-par.design$ALPHA <- 1;
-par.design$BETA <- 1;
+par.design$ALPHA <- 0.5;
+par.design$POWER <- 0.5;
 
 baDesignBetaBin(par.design, rho = 1, bsizes = 2, nmin = 10, nmax = 20)
 ```
