@@ -200,7 +200,7 @@ NumericMatrix bacSimonDesign(NumericMatrix y0, NumericMatrix y1, int nmax, int n
       for (r = n; r >= 0; r--) {
         for (r1 = fmin(r,n1); r1 >= 0; r1--) {
           cp0 = bacSimonSingle(cumu0, n1, r1, n, r);
-          if (cp0(2) > alpha |
+          if (cp0(2) > alpha ||
               cp0(0) > rst(0,4))
             break;
 
