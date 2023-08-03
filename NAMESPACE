@@ -49,12 +49,9 @@ export(vtTrack)
 import(Rcpp)
 import(methods)
 import(stats)
-<<<<<<< Updated upstream
-=======
 importFrom(RcppParallel,RcppParallelLibs)
 importFrom(cowplot,plot_grid)
 importFrom(cowplot,save_plot)
->>>>>>> Stashed changes
 importFrom(ggplot2,aes)
 importFrom(ggplot2,element_blank)
 importFrom(ggplot2,geom_density)
