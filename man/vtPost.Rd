@@ -34,7 +34,7 @@ vtPost(
 
 \item{PARA+: }{partially parametric+ model} }
 
-Default value is \code{NONPARA}. See \code{\link[visit]{parameter}} for details.}
+Default value is \code{NONPARA}. See \code{\link[visit]{parameters}} for details.}
 
 \item{priors}{A class \code{VTPRIOR} object created by
 \code{\link{vtPriorPar}} for \code{PARA} and \code{PARA+} model.}

@@ -22,7 +22,7 @@ This can be a scalar representing the mean of the response rate
 
 \item{dec.cut}{Thresholds \eqn{C_1,C_2,C_3}. If the vector length is shorter
 than \eqn{3}, it is repeated to have \eqn{3} elements. See
-\code{\link[visit]{parameter}} for details.}
+\code{\link[visit]{parameters}} for details.}
 }
 \value{
 A class \code{VTDEC} list. See the return value from \code{\link{vtInterim}}
