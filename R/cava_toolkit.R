@@ -23,7 +23,7 @@ tkExpRst <- function(numbers, template.f,  out.f="rst.txt", sub.str="AA") {
 
     ##write out
     write(tpla, file=out.f);
-    return();
+    return(NULL)
 }
 
 
@@ -48,11 +48,12 @@ tkMakeLocal <- function(alist, dest.env='.GlobalEnv') {
 #' @export
 #'
 tkCallFun <- function(vec, ...) {
+    rst <- NULL
     eval(parse(text=paste("rst <- ",
                           paste(vec, collapse = ""),
                           "(...)",
                           sep="")
                )
-         );
+         )
     rst
 }

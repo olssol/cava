@@ -5,9 +5,9 @@
 #' @param rho inter-class correlation 1/(a+b+1)
 #' @param seed Seed
 #' @param nreps number of repetitions
-#' 
+#'
 #' @return Simulated binary outcomes by batches
-#' 
+#'
 #' @export
 #'
 baSimuBetaBin <- function(bsize, p, rho = 0, seed = NULL, nreps = 1000000) {
@@ -36,7 +36,7 @@ baSimuBetaBin <- function(bsize, p, rho = 0, seed = NULL, nreps = 1000000) {
 #' @details Skewed distribution: Prameterization: mu, phi; RNBINOM uses (n,p)
 #'     with: phi = n, mu = n(1-p)/p; Mean: mu = n(1-p)/p #; Variances:
 #'     mu(1+mu/phi) = n (1-p)/p^2
-#' 
+#'
 #' @param n sample size
 #' @param error.type normal or skewed
 #' @param sig standard deviation
@@ -44,9 +44,9 @@ baSimuBetaBin <- function(bsize, p, rho = 0, seed = NULL, nreps = 1000000) {
 #' @param skew.mu if skewed, by how much
 #' @param skew.phi if skewed, by how much
 #' @param skew.noise if skewed, contains how much noise
-#' 
+#'
 #' @return check detail for exact computation
-#' 
+#'
 #' @export
 #'
 baSimuError <- function(n,
@@ -77,9 +77,9 @@ baSimuError <- function(n,
 #' @param bsize batch size
 #' @param par.err a list of gamma, delta, epsilon error
 #' @param nreps number of repetitions
-#' 
+#'
 #' @return a list of gamma, delta, and epsilon error
-#' 
+#'
 #' @export
 #'
 baSimuBatchError <- function(bsize,
@@ -115,12 +115,12 @@ baSimuBatchError <- function(bsize,
 #'
 #' @param bsize batch size
 #' @param par.err a list of gamma, delta, epsilon error
-#' @param par.other other parameters including u0, u1, v, and beta 
+#' @param par.other other parameters including u0, u1, v, and beta
 #' @param nreps number of repetitions
 #' @param ... reserved parameters
-#' 
+#'
 #' @return simulation of t-cell counts with given parameters
-#' 
+#'
 #' @export
 #'
 baSimuTcell <- function(bsize, par.err, par.other, nreps = 1000000, ...) {
@@ -153,40 +153,40 @@ baSimuTcell <- function(bsize, par.err, par.other, nreps = 1000000, ...) {
 #' Get cut off of the outcome to get given response rates
 #'
 #' @param par.err a list of gamma, delta, epsilon error
-#' @param par.other other parameters including u0, u1, v, and beta 
+#' @param par.other other parameters including u0, u1, v, and beta
 #' @param rates response rates
 #' @param f.simu simulating function
 #' @param ... reserved parameters
 #' @param seed Seed
-#' 
+#'
 #' @return a list of cut off given the response rates
-#' 
+#'
 #' @export
 #'
 baGetCuts <- function(par.err, par.other, rates, f.simu = baSimuTcell, ..., seed = NULL) {
 
     if (!is.null(seed))
-        set.seed(seed);
+        set.seed(seed)
 
     true.pts <- f.simu(bsize     = 1,
                        par.err   = par.err,
                        par.other = par.other,
-                       ...)$y;
+                       ...)$y
 
-    cut.y <- unname(quantile(true.pts, probs = 1 - rates));
-    rst   <- cbind(rate = cut.ps, cuts = cut.y);
-    return(rst);
+    cut.y <- unname(quantile(true.pts, probs = 1 - rates))
+    rst   <- cbind(rate = rates, cuts = cut.y)
+    return(rst)
 }
 
 
 #' Get CV, batch effect variance ratio and ICC
 #'
 #' @param par.err a list of gamma, delta, epsilon error
-#' @param par.other other parameters including u0, u1, v, and beta 
+#' @param par.other other parameters including u0, u1, v, and beta
 #' @param rates response rates
 #' @param f.simu simulating function
 #' @param ... reserved parameters
-#' 
+#'
 #' @return a list containing CV, batch effect variance ratio, and ICC
 #'
 #' @export

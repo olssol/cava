@@ -2,10 +2,10 @@
 #' Get batch indices
 #'
 #' @param batch.sizes a vector of batch sizes
-#' 
+#'
 #' @return a vector where all subjects in batch.sizes are denoted by its batch
-#'     number, and the length of this vector is total number of subjects. 
-#' 
+#'     number, and the length of this vector is total number of subjects.
+#'
 #' @export
 #'
 baBatInd <- function(batch.sizes) {
@@ -42,9 +42,9 @@ baGetOutcome <- function(mat.y, type = c("ratio", "change", "base")) {
 #' @param phi target for number of successful trials
 #' @param n (Optional) number of observations
 #' @param is.log logical; if TRUE, mu, phi are are given as log(mu) and log(phi)
-#' 
+#'
 #' @return Negative Binomial Distribution with n as length of mu
-#' 
+#'
 #' @export
 #'
 baRNB <- function(mu, phi, n = NULL, is.log = TRUE) {
@@ -117,8 +117,8 @@ baElicitFitMix <- function(dat, fml, des_mu = 1, nbs = 1000) {
 #' @param ntest number of replications
 #' @param threshold threshold to be considered response
 #' @param take_exp whether the proliferation model is log transformed
-#' @param seed Seed 
-#' 
+#' @param seed Seed
+#'
 #' @return Estimated ICC with its (bootstrap) SD.
 #'
 #' @export

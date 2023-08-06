@@ -11,7 +11,9 @@ plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6)) {
 
     ggplot(data = dta, aes(x = Error)) +
       stat_density(aes(group=Type, linetype = Type, color = Type),
-                   position="identity", geom = "line", adjust = 1.2, na.rm = TRUE) +
+                   position="identity",
+                   geom = "line",
+                   adjust = 1.2, na.rm = TRUE) +
       scale_color_manual(values = c("gamma"   = "red",
                                     "delta"   = "blue",
                                     "epsilon" = "black"),
@@ -36,16 +38,16 @@ plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6)) {
 #' Plot histogram of t-cells Y0 Y1 and Y1/Y0 for a given scenario
 #'
 #' @param par.err a list of gamma, delta, epsilon error
-#' @param par.other other parameters including u0, u1, v, and beta 
+#' @param par.other other parameters including u0, u1, v, and beta
 #' @param nreps number of repetitions
 #' @param pos.legend legend position
 #' @param f.simu simulating function
 #' @param fname file name to save to
 #' @param ... reserved parameters
 #' @param ry.quants quantiles
-#' 
+#'
 #' @return a plot of histogram of t-cells Y0 Y1 and Y1/Y0 for a given scenario
-#' 
+#'
 #' @export
 #'
 baPltTcell <- function(par.err, par.other, nreps = 100000, pos.legend = c(0.8, 0.6),
@@ -55,17 +57,19 @@ baPltTcell <- function(par.err, par.other, nreps = 100000, pos.legend = c(0.8, 0
     errplot <- plot(error);
 
     test.outcome <- f.simu(1, par.err= par.err, par.other = par.other, nreps = nreps);
+
     dta.outcome  <- rbind(data.frame(Outcome = "Y0", Y = test.outcome$y0),
                           data.frame(Outcome = "Y1", Y = test.outcome$y1));
 
-    yplot <- ggplot(data = dta.outcome, aes(x = Y,
+    yplot <- ggplot(data = dta.outcome, aes(x        = Y,
                                             fill     = Outcome,
                                             linetype = Outcome,
                                             col      = Outcome)) +
-        geom_histogram(aes(y = ..count../sum(..count..)),
+        geom_histogram(aes(y = ..count.. / sum(..count..)),
                        alpha = 0.1,
                        position = "identity",
-                       na.rm = TRUE, ...) +
+                       na.rm = TRUE,
+                       ...) +
         labs(x = "T-Cell Counts", y = "Proportion") +
         theme_bw() +
         theme(legend.position = pos.legend,
@@ -78,7 +82,9 @@ baPltTcell <- function(par.err, par.other, nreps = 100000, pos.legend = c(0.8, 0
 
     for (qu in ry.quants) {
         cur.q <- quantile(test.outcome$y, qu);
-        ryplot <- ryplot + geom_vline(xintercept = cur.q, linetype = 2, col = "red");
+        ryplot <- ryplot + geom_vline(xintercept = cur.q,
+                                      linetype = 2,
+                                      col = "red");
     }
 
 
@@ -96,7 +102,7 @@ baPltTcell <- function(par.err, par.other, nreps = 100000, pos.legend = c(0.8, 0
 #' @param xlims x limit of the plot
 #' @param ylims y limit of the plot
 #' @param label label for the plot
-#' @param ... reserved parameters 
+#' @param ... reserved parameters
 #'
 #' @export
 #'
