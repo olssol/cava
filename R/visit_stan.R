@@ -12,7 +12,7 @@
 #'   \item{0:}{parametric model}
 #'   \item{1:}{parametric+ model}
 #' }
-#' See \code{\link[visit]{vtStan}} for details.
+#' See \code{\link[cava]{vtStan}} for details.
 #'
 #' @param iter STAN option: number of iterations
 #' @param chains STAN option: number of chains
@@ -111,7 +111,7 @@ vtStan <- function(obs.y,
 #' @return A class \code{VTPOST} matrix of posterior samples with \code{nsmp}
 #'     rows and 4 columns. Columns 1-4 correspond to\eqn{\theta^{(l)}_{00},
 #'     \theta^{(l)}_{01}, \theta^{(l)}_{10}, \theta^{(l)}_{11}}. See
-#'     \code{\link[visit]{vtPost}} for details about \eqn{\theta}'s.
+#'     \code{\link[cava]{vtPost}} for details about \eqn{\theta}'s.
 #'
 #'
 #'
