@@ -158,7 +158,7 @@ NumericVector baSaDesign(int nmin, int bsize, double alpha, double beta, double 
     for (r = floor(n*p0); r <= n; r++) {
       ab = baSaAlphaBeta(bsizes, r, p0, p1, rho0, rho1);
 
-      if (ab(0) < alpha & ab(1) < beta) {
+      if (ab(0) < alpha && ab(1) < beta) {
         flag = 1;
         break;
       }

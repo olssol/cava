@@ -12,7 +12,10 @@
 #' @importFrom parallel detectCores
 #' @importFrom utils as.roman
 #' @importFrom lme4 lmer VarCorr
-#' @importFrom ggplot2 ggplot scale_x_continuous scale_y_continuous aes geom_histogram labs theme_bw theme element_blank geom_density geom_vline scale_color_manual scale_linetype_manual element_blank
+#' @importFrom ggplot2 ggplot scale_x_continuous scale_y_continuous aes geom_histogram labs theme_bw theme element_blank geom_density geom_vline scale_color_manual scale_linetype_manual element_blank stat_density
+#' @importFrom cowplot plot_grid save_plot
+#' @importFrom rstantools rstan_config
+#' @importFrom RcppParallel RcppParallelLibs
 #' @import stats
 #' @import Rcpp
 #' @import methods
@@ -192,7 +195,7 @@ NULL
 #'
 #' \item{PARA+: }{partially parametric+ model} }
 #'
-#' Default value is \code{NONPARA}. See \code{\link[visit]{parameter}} for details.
+#' Default value is \code{NONPARA}. See \code{\link[visit]{parameters}} for details.
 #'
 #' @param priors A class \code{VTPRIOR} object created by
 #'     \code{\link{vtPriorPar}} for \code{PARA} and \code{PARA+} model.
@@ -210,7 +213,7 @@ NULL
 #'
 #' @param dec.cut Thresholds \eqn{C_1,C_2,C_3}. If the vector length is shorter
 #'     than \eqn{3}, it is repeated to have \eqn{3} elements. See
-#'     \code{\link[visit]{parameter}} for details.
+#'     \code{\link[visit]{parameters}} for details.
 #'
 #' @param digits Digits for print
 #'
