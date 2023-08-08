@@ -10,10 +10,10 @@ vtPriorPar(prior.y = NULL, tau = NULL, sdalpha = 10, sdrho = 10, vtheta = NULL)
 \item{prior.y}{Historical data for generating prior parameters. It has the
 same structure as \code{obs.y} in \code{\link{vtPost}}.}
 
-\item{tau}{Vector of \eqn{\tau} values. See \code{\link[visit]{vtPriorPar}} for details.
+\item{tau}{Vector of \eqn{\tau} values. See \code{\link[cava]{vtPriorPar}} for details.
 Can not be \code{NULL} if \code{prior.y} is \code{NULL}.}
 
-\item{sdalpha}{\eqn{\sigma_\alpha}. See \code{\link[visit]{vtPriorPar}} for details.}
+\item{sdalpha}{\eqn{\sigma_\alpha}. See \code{\link[cava]{vtPriorPar}} for details.}
 
 \item{sdrho}{\eqn{\sigma_\rho}.}
 

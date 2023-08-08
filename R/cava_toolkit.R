@@ -6,12 +6,11 @@
 #' @param out.f      output file name
 #' @param sub.str    pattern of string to be replaced
 #'
-#'
 #' @export
 #'
 tkExpRst <- function(numbers, template.f,  out.f="rst.txt", sub.str="AA") {
     if (!file.exists(template.f)) {
-        return;
+        return();
     }
     ##read
     tpla <- readChar(template.f, file.info(template.f)$size);
@@ -23,7 +22,7 @@ tkExpRst <- function(numbers, template.f,  out.f="rst.txt", sub.str="AA") {
 
     ##write out
     write(tpla, file=out.f);
-    return(NULL)
+    return();
 }
 
 

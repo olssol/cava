@@ -34,7 +34,7 @@ vtPost(
 
 \item{PARA+: }{partially parametric+ model} }
 
-Default value is \code{NONPARA}. See \code{\link[visit]{parameters}} for details.}
+Default value is \code{NONPARA}. See \code{\link[cava]{parameters}} for details.}
 
 \item{priors}{A class \code{VTPRIOR} object created by
 \code{\link{vtPriorPar}} for \code{PARA} and \code{PARA+} model.}
@@ -53,7 +53,7 @@ options include \code{warmup}, \code{thin}, \code{algorithm}. See
 A class \code{VTPOST} matrix of posterior samples with \code{nsmp}
     rows and 4 columns. Columns 1-4 correspond to\eqn{\theta^{(l)}_{00},
     \theta^{(l)}_{01}, \theta^{(l)}_{10}, \theta^{(l)}_{11}}. See
-    \code{\link[visit]{vtPost}} for details about \eqn{\theta}'s.
+    \code{\link[cava]{vtPost}} for details about \eqn{\theta}'s.
 }
 \description{
 Call STAN to draw posterior samples of the joint distribution of

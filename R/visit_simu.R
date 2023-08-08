@@ -74,9 +74,9 @@ vtScenario <- function(tox = c(0.05, 0.05, 0.08),
 #'
 #' @param prior.y Historical data for generating prior parameters. It has the
 #'     same structure as \code{obs.y} in \code{\link{vtPost}}.
-#' @param tau Vector of \eqn{\tau} values. See \code{\link[visit]{vtPriorPar}} for details.
+#' @param tau Vector of \eqn{\tau} values. See \code{\link[cava]{vtPriorPar}} for details.
 #'     Can not be \code{NULL} if \code{prior.y} is \code{NULL}.
-#' @param sdalpha \eqn{\sigma_\alpha}. See \code{\link[visit]{vtPriorPar}} for details.
+#' @param sdalpha \eqn{\sigma_\alpha}. See \code{\link[cava]{vtPriorPar}} for details.
 #' @param sdrho \eqn{\sigma_\rho}.
 #' @param vtheta Additional variance term for eliciting prior parameters from
 #'     \code{prior.y}
@@ -405,7 +405,7 @@ summary2.VTSIMU <- function(x, ...) {
 #' \item{6:}{\eqn{\theta_{11}}}
 #' }
 #'
-#' See \code{\link[visit]{plot.VTTRUEPS}} for details.
+#' See \code{\link[cava]{plot.VTTRUEPS}} for details.
 #'
 #' @param legends Line legends
 #' @param ltys Line types

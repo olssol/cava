@@ -4,7 +4,12 @@
 #' @param opts optional parameters
 #' @param pos.legend legend position
 #'
+#' @noRd 
 plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6)) {
+
+    Error <- NULL;
+    Type <- NULL;
+
     dta <- rbind(data.frame(Type = "gamma", Error = x$gamma),
                  data.frame(Type = "delta", Error = x$delta),
                  data.frame(Type = "epsilon", Error = x$epsilon));
@@ -52,6 +57,14 @@ plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6)) {
 #'
 baPltTcell <- function(par.err, par.other, nreps = 100000, pos.legend = c(0.8, 0.6),
                        f.simu = baSimuTcell, fname = NULL, ..., ry.quants = c(0.1,0.5,0.9)) {
+
+    ..count.. <- NULL;
+    Error <- NULL;
+    Outcome <- NULL;
+    Type <- NULL;
+    Y <- NULL;
+    x <- NULL;
+
 
     error   <- baSimuBatchError(bsize = 1, par.err, nreps = nreps);
     errplot <- plot(error);
