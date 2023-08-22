@@ -116,12 +116,13 @@ lst.combine <- function(lst, var) {
 ## project specic functions
 ##---------------------------------------------------
 
-plot.densities <- function(lst.dens, draw.curves = 1:6, draw.levels=NULL,
+plot.densities <- function(x, draw.curves = 1:6, draw.levels=NULL,
                            legends=NULL, mfrow=NULL,
                            ltys = c(1,1,2,2,2,2),
                            cols = c("red", "blue", "brown", "black", "gray", "green"),
-                           max.y.adjust = 1.1
+                           max.y.adjust = 1.1, ...
                            ) {
+    lst.dens <- x;
 
     if (is.null(legends)) {
         legends <- get.const()$DENLEGEND;

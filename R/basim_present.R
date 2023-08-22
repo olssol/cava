@@ -5,7 +5,7 @@
 #' @param pos.legend legend position
 #'
 #' @noRd 
-plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6)) {
+plot.ClsBaErr <- function(x, opts = NULL, pos.legend = c(0.8, 0.6), ...) {
 
     Error <- NULL;
     Type <- NULL;
